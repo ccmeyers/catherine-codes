@@ -3,162 +3,49 @@
   <head>
     <meta charset="utf-8">
     <title>Catherine Meyers</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Responsive HTML template for Your company">
-    <meta name="author" content="Oskar Żabik (oskar.zabik@gmail.com)">
-
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/typica.css">
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <!-- favicon -->
-    <link rel="shortcut icon" href="favicon.ico">
-
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
 
   <body>
 
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="index.html">Catherine Meyers</a>
-          <div class="nav-collapse">
-            <ul class="nav pull-right">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="#portfolio">Portfolio</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="http://anunexpectedcoder.com/" target="blank">Blog</a></li>
-              <li><a href="https://github.com/ccmeyers" target="blank">Github</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
+    <div class="navbar">
+      <a class="brand" href="index.html">Catherine Meyers</a>
+
+      <ul class="nav-right">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="home">
+      <img src="img/bkbridge.jpg" alt="Brooklyn Bridge">
+
+      <div class="caption">
+        <p>Opera Singer turned</p>
+        <p>Web Developer</p>
       </div>
     </div>
 
-    <!-- <div class="slider-block"> -->
-
-      <div id="myCarousel" class="carousel slide">
-        <!-- Carousel items -->
-        <div class="carousel-inner">
-          <div class="active item">
-            <img src="img/bkbridge.jpg" alt="Brooklyn Bridge">
-            <div class="caption middle-left container">
-              <p class="small white text-dark">Opera Singer turned</p>
-              <p class="medium white text-pink">Web Developer</p>
-              <!-- <p class="large pink add-space">TYPICA</p> -->
-            </div>
-        </div>
-   <!--      <div class="item">
-          <img src="img/slide_bg1.jpg" alt="Slide2">
-          <div class="caption bottom-right container">
-            <p class="large pink add-space">Better carousel</p>
-            <p class="small white">Multiple text & background colors</p>
-            <p class="small white">Multiple caption positions</p>
-            <p class="medium white text-pink">and much more!</p>
-          </div>
-        </div>
-        <div class="item">
-          <img src="img/slide_bg3.jpg" alt="Slide2">
-          <div class="caption top-right container">
-            <p class="medium pink add-space">Isn't that just</p>
-            <p class="large white text-dark">AWESOME?</p>
-          </div>
-        </div>
-        </div>
-        <!-- Carousel nav -->
-        <!-- <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a> -->
-        <!-- <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a> -->
-      </div>
-
-    <!-- </div> -->
-
-    <div class="hero-unit" id="portfolio">
-      <div class="container">
-        <div class="row">
-          <div class="span12">
-            <h1>Projects <strong class="pink">Built</strong></h1>
-          </div>
-        </div>
-      </div>
+    <div class="about">
+      <h1>About</h1>
+      <p>Hi, I’m Catherine and I’m a Ruby newbie. I came to The Flatiron School after leaving a career as a professional opera singer, and I am constantly amazed at the parallels between these two careers. In fact, it was my background in music that led me to my first experience with coding. While working at a music school with an archaic website that no one knew how to update, I took it upon myself to learn HTML, and updated it myself. I enjoyed it so much that I started playing around with reformatting the site as well. Since then, my love for creating things through code has only deepened. The more I learn, the more infatuated I become!</p>
+      <img src="img/catherine_meyers.jpg">
     </div>
 
-    <div class="container">
-
-      <!-- TESTIMONIALS 3col -->
-      <div class="row testimonials">
-          <div class="span4">
-            <img src="img/testimonials_placeholder.png" alt="placeholder+image">
-            <h2>Lorem ipsum</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          </div>
-          <div class="span4">
-            <img src="img/testimonials_placeholder.png" alt="placeholder+image">
-            <h2>Quis nostrud</h2>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. </p>
-          </div>
-          <div class="span4">
-            <img src="img/testimonials_placeholder.png" alt="placeholder+image">
-            <h2>Cupidatat non proident</h2>
-            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
+    <div class="portfolio">
+      <h1>Projects Built</h1>
+      <div class="first-project">
+        <img src="img/ensemblify-screen-shot.png">
+      </div>      
+      <div class="second-project">
+        <img src="img/best-stop-screen-shot.png">
+      </div>      
+      <div class="third-project">
+        <img src="img/petite-performer-screen-shot.png">
       </div>
-
-     <div class="hero-unit" id="about">
-       <div class="container">
-         <div class="row">
-           <div class="span12">
-             <h1>About Me</h1>
-           </div>
-         </div>
-       </div>
-     </div>
-
-    <div class="container">
-      <!-- <div class="team"> -->
-
-        <div class="row">
-
-          <div class="span6" id="about-text">
-            <p>Hi, I’m Catherine and I’m a Ruby newbie. I came to The Flatiron School after leaving a career as a professional opera singer, and I am constantly amazed at the parallels between these two careers.
-
-In fact, it was my background in music that led me to my first experience with coding. While working at a music school with an archaic website that no one knew how to update, I took it upon myself to learn HTML, and updated it myself. I enjoyed it so much that I started playing around with reformatting the site as well.
-
-Since then, my love for creating things through code has only deepened. The more I learn, the more infatuated I become!</p>
-          </div>
-        
-        
-      </div>
-    </div> <!-- /container -->
-
-    <!-- <footer> -->
-      <!-- <div class="container"> -->
-        <!-- COPYRIGHTS
-        <!-- <p class="pull-left">Typica - Bootstrap template crafted with passion</p> -->
-        <!-- <p class="pull-right"><a href="#">Back to top</a></p> -->
-      <!-- </div> -->
-    <!-- </footer>  -->
-
-
-    <!-- javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/setup.js"></script>
+    </div>
 
   </body>
 </html>

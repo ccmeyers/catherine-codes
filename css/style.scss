@@ -1,0 +1,78 @@
+@import 'jeet/index';
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:800,600,400,300|Open+Sans+Condensed:300,700|Lato:100,300,400);
+
+@include edit();
+
+@mixin navbar-text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 30px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.navbar {
+  background-color: white;
+  height: 80px;
+  a {
+    text-decoration: none;
+  }
+  .brand {
+    @include col(.60);
+    @include navbar-text;
+    margin: 16px 0;
+  }
+  ul {
+    @include col(.40);
+    float: right;
+    margin-top: 30px;
+    li {
+      display: inline;
+      @include col(1/4);
+      @include navbar-text;
+      font-size: 15px;
+    }
+  }
+}
+
+.home {
+  img {
+  max-width: 100%;
+  }
+  .caption {
+  }
+}
+
+h1 {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 200;
+  background-color: white;
+  padding: 10px;
+}
+
+.about {
+  p {
+    @include col(2/3);
+  }
+  img {
+    @include col(1/3);
+    max-height: 450px;
+    max-width: 300px;
+  }
+}
+
+.portfolio {
+  .first-project{
+    @include center(750px);
+  }  
+  .second-project{
+    @include center(750px);
+  
+  }  
+  .third-project{
+    @include center(750px);
+
+  }
+}
