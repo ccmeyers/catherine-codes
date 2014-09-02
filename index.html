@@ -44,15 +44,43 @@
 
     <div class="portfolio">
       <h1>Projects Built</h1>
+
       <div class="first-project">
         <img src="img/ensemblify-screen-shot.png">
-      </div>      
+        <span class="first-text"><a href="http://www.ensemblify.com/" target="blank">ensemblify</a><br/> A Rails app that pairs classical musicians with chamber ensembles
+          <ul>
+            <li>Used Facebook Omniauth to create and authenticate users</li>
+            <li>Wrote intelligent matching algorithms to query the database and return appropriate matches for musicians and groups</li>
+            <li>Built notification system for musicians and groups of pending invitations or requests</li>
+            <li>Implemented internal user to user messaging system</li>
+            <li>Incorporated the Spotify API to enable user to preview pieces of music</li>
+          </ul>
+        </span>
+      </div>
+
       <div class="second-project">
         <img src="img/best-stop-screen-shot.png">
-      </div>      
+        <span class="second-text"><a href="http://best-stop.herokuapp.com/" target="blank">best stop, the <em>anti</em>-rest stop</a><br/>
+          A Rails app that provides alternatives to rest stop eateries for road trips
+          <ul>
+           <li>Utilized the Google Maps API to display a route from start to end</li>
+           <li>Calculated the latitude/longitude of a stopping point requested by distance or time</li>
+           <li>Integrated the Yelp API to present the user with a selection of highly rated restaurants at or near designated point</li>
+          </ul>
+        </span>
+      </div>
+
       <div class="third-project">
         <img src="img/petite-performer-screen-shot.png">
+        <span class="third-text"><a href="http://www.petiteperformer.com/" target="blank">petite performer</a><br/>
+          A Sinatra app that searches for early childhood music classes in NYC
+          <ul>
+            <li>Built search functionality to query database and return appropriate matches based on location, age, and availability</li>
+            <li>Incorporated geocoding to sort results by distance and to provide mapping</li>
+          </ul>
+        </span>
       </div>
+
     </div>
 
   </body>

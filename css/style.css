@@ -330,7 +330,7 @@
   font-weight: 200;
   background-color: white;
   padding: 10px; }
-.portfolio .first-project {
+.portfolio div {
   *zoom: 1;
   width: auto;
   max-width: 750px;
@@ -344,48 +344,67 @@
   -webkit-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.6);
   -moz-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.6);
   box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.6); }
-  .portfolio .first-project:before, .portfolio .first-project:after {
+  .portfolio div:before, .portfolio div:after {
     content: '';
     display: table; }
-  .portfolio .first-project:after {
+  .portfolio div:after {
     clear: both; }
-.portfolio .second-project {
-  *zoom: 1;
-  width: auto;
-  max-width: 750px;
-  float: none;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0;
-  padding-right: 0;
-  margin-bottom: 20px;
-  -webkit-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.6);
-  -moz-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.6);
-  box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.6); }
-  .portfolio .second-project:before, .portfolio .second-project:after {
-    content: '';
-    display: table; }
-  .portfolio .second-project:after {
-    clear: both; }
-.portfolio .third-project {
-  *zoom: 1;
-  width: auto;
-  max-width: 750px;
-  float: none;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0;
-  padding-right: 0;
-  margin-bottom: 20px;
-  -webkit-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.6);
-  -moz-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.6);
-  box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.6); }
-  .portfolio .third-project:before, .portfolio .third-project:after {
-    content: '';
-    display: table; }
-  .portfolio .third-project:after {
-    clear: both; }
+  .portfolio div span {
+    *zoom: 1;
+    width: auto;
+    max-width: 1410px;
+    float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+    *zoom: 1;
+    display: inline;
+    clear: none;
+    text-align: inherit;
+    float: left;
+    width: 79.4%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 10.3%;
+    margin-right: 3%;
+    padding: 20px 0;
+    font-family: "Lato", sans-serif; }
+    .portfolio div span:before, .portfolio div span:after {
+      content: '';
+      display: table; }
+    .portfolio div span:after {
+      clear: both; }
+    .portfolio div span:before, .portfolio div span:after {
+      content: '';
+      display: table; }
+    .portfolio div span:after {
+      clear: both; }
+    .portfolio div span:last-child {
+      margin-right: 0%; }
+    .portfolio div span a:link {
+      *zoom: 1;
+      width: auto;
+      max-width: 300px;
+      float: none;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 0;
+      padding-right: 0;
+      line-height: 50px;
+      text-decoration: none;
+      font-size: 25px;
+      color: rgba(179, 46, 46, 0.9); }
+      .portfolio div span a:link:before, .portfolio div span a:link:after {
+        content: '';
+        display: table; }
+      .portfolio div span a:link:after {
+        clear: both; }
+    .portfolio div span a:visited {
+      color: rgba(179, 46, 46, 0.9); }
+    .portfolio div span a:hover {
+      color: rgba(179, 46, 46, 0.9); }
 
 /*# sourceMappingURL=style.css.map */
