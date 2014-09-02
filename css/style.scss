@@ -9,6 +9,7 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   font-weight: 300;
+  text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
 }
 
 @mixin projects {
@@ -27,6 +28,7 @@
   font-weight: 200;
   background-color: white;
   padding: 10px;
+  text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
 }
 
 .navbar {
@@ -95,6 +97,9 @@
     @include col(.5, $offset: .1);
     font-family: "Lato", sans-serif;
     font-size: 20px;
+    img {
+      opacity:.8;
+    }
     a:link {
       text-decoration: none;
       color: #616161;
@@ -106,11 +111,13 @@
       color: #616161;
     }
     ul {
+      @include col(.75, $offset:.25);
       list-style-type: none;
-      @include col(.75, $offset:.15);
       img {
-        max-height:50px;
-        max-width:50px;
+        @include col($gutter:-.1);
+        padding-right:20px;
+        max-height:40px;
+        max-width:40px;
       }
     }
   }
@@ -128,6 +135,9 @@
   }
   div {
     @include projects;
+    img {
+      cursor:pointer;
+    }
     span {
       @include center;
       @include col(.8, $offset: .1);

@@ -137,6 +137,7 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     font-weight: 300;
+    text-shadow: 1px 1px 2px #969696;
     margin: 20px 0 20px 30px; }
     .navbar .brand:before, .navbar .brand:after {
       content: '';
@@ -182,6 +183,7 @@
       letter-spacing: 1px;
       text-transform: uppercase;
       font-weight: 300;
+      text-shadow: 1px 1px 2px #969696;
       font-size: 15px; }
       .navbar ul li:before, .navbar ul li:after {
         content: '';
@@ -250,7 +252,8 @@
     text-transform: uppercase;
     font-weight: 200;
     background-color: white;
-    padding: 10px; }
+    padding: 10px;
+    text-shadow: 1px 1px 2px #969696; }
   .about section {
     *zoom: 1;
     display: inline;
@@ -271,6 +274,8 @@
       clear: both; }
     .about section:last-child {
       margin-right: 0%; }
+    .about section img {
+      opacity: .8; }
     .about section a:link {
       text-decoration: none;
       color: #616161; }
@@ -279,7 +284,6 @@
     .about section a:hover {
       color: #616161; }
     .about section ul {
-      list-style-type: none;
       *zoom: 1;
       display: inline;
       clear: none;
@@ -288,8 +292,9 @@
       width: 74.25%;
       padding-left: 0;
       padding-right: 0;
-      margin-left: 15.45%;
-      margin-right: 3%; }
+      margin-left: 25.75%;
+      margin-right: 3%;
+      list-style-type: none; }
       .about section ul:before, .about section ul:after {
         content: '';
         display: table; }
@@ -298,8 +303,26 @@
       .about section ul:last-child {
         margin-right: 0%; }
       .about section ul img {
-        max-height: 50px;
-        max-width: 50px; }
+        *zoom: 1;
+        display: inline;
+        clear: none;
+        text-align: inherit;
+        float: left;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0%;
+        margin-right: -0.1%;
+        padding-right: 20px;
+        max-height: 40px;
+        max-width: 40px; }
+        .about section ul img:before, .about section ul img:after {
+          content: '';
+          display: table; }
+        .about section ul img:after {
+          clear: both; }
+        .about section ul img:last-child {
+          margin-right: 0%; }
   .about img {
     *zoom: 1;
     display: inline;
@@ -329,7 +352,8 @@
   text-transform: uppercase;
   font-weight: 200;
   background-color: white;
-  padding: 10px; }
+  padding: 10px;
+  text-shadow: 1px 1px 2px #969696; }
 .portfolio div {
   *zoom: 1;
   width: auto;
@@ -349,6 +373,8 @@
     display: table; }
   .portfolio div:after {
     clear: both; }
+  .portfolio div img {
+    cursor: pointer; }
   .portfolio div span {
     *zoom: 1;
     width: auto;
