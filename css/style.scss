@@ -102,13 +102,16 @@
     }
     a:link {
       text-decoration: none;
-      color: #616161;
+      color: #3866B5;
     }
     a:visited {
-      color: #616161;
+      color: #3866B5;
     }
     a:hover {
-      color: #616161;
+      color: #3866B5;
+    }
+    .resume {
+      @include col(.2, $offset:.8);
     }
     ul {
       @include col(.75, $offset:.25);

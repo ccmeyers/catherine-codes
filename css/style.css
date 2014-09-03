@@ -278,11 +278,29 @@
       opacity: .8; }
     .about section a:link {
       text-decoration: none;
-      color: #616161; }
+      color: #3866B5; }
     .about section a:visited {
-      color: #616161; }
+      color: #3866B5; }
     .about section a:hover {
-      color: #616161; }
+      color: #3866B5; }
+    .about section .resume {
+      *zoom: 1;
+      display: inline;
+      clear: none;
+      text-align: inherit;
+      float: left;
+      width: 17.6%;
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: 82.4%;
+      margin-right: 3%; }
+      .about section .resume:before, .about section .resume:after {
+        content: '';
+        display: table; }
+      .about section .resume:after {
+        clear: both; }
+      .about section .resume:last-child {
+        margin-right: 0%; }
     .about section ul {
       *zoom: 1;
       display: inline;
