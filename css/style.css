@@ -138,7 +138,7 @@
     text-transform: uppercase;
     font-weight: 300;
     text-shadow: 1px 1px 2px #969696;
-    margin: 20px 0 20px 30px; }
+    margin: 20px 0 20px 40px; }
     .navbar .brand:before, .navbar .brand:after {
       content: '';
       display: table; }
@@ -152,7 +152,7 @@
     clear: none;
     text-align: inherit;
     float: left;
-    width: 38.2%;
+    width: 27.9%;
     padding-left: 0;
     padding-right: 0;
     margin-left: 0%;
@@ -366,7 +366,8 @@
       margin-right: 13.3%; }
 
 .portfolio {
-  background: rgba(255, 255, 255, 0.3); }
+  background: rgba(192, 192, 192, 0.95);
+  height: 1300px; }
   .portfolio h1 {
     text-align: center;
     font-family: "Open Sans", sans-serif;
@@ -387,7 +388,7 @@
     margin-right: auto;
     padding-left: 0;
     padding-right: 0;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     -webkit-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.6);
     -moz-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.6);
     box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.6); }
@@ -399,7 +400,7 @@
     .portfolio div img {
       cursor: pointer; }
     .portfolio div span {
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.95);
       position: absolute;
       top: 0px;
       left: -77px;
@@ -407,7 +408,7 @@
       height: 322px;
       *zoom: 1;
       width: auto;
-      max-width: 1410px;
+      max-width: 750px;
       float: none;
       display: block;
       margin-left: auto;
@@ -439,6 +440,7 @@
       .portfolio div span:last-child {
         margin-right: 0%; }
       .portfolio div span a:link {
+        padding-top: 30px;
         *zoom: 1;
         width: auto;
         max-width: 300px;
@@ -461,5 +463,25 @@
         color: rgba(179, 46, 46, 0.9); }
       .portfolio div span a:hover {
         color: rgba(179, 46, 46, 0.9); }
+      .portfolio div span ul {
+        *zoom: 1;
+        display: inline;
+        clear: none;
+        text-align: inherit;
+        float: left;
+        width: 79.4%;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 15.45%;
+        margin-right: 3%; }
+        .portfolio div span ul:before, .portfolio div span ul:after {
+          content: '';
+          display: table; }
+        .portfolio div span ul:after {
+          clear: both; }
+        .portfolio div span ul:last-child {
+          margin-right: 0%; }
+        .portfolio div span ul li {
+          line-height: 22px; }
 
 /*# sourceMappingURL=style.css.map */
