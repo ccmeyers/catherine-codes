@@ -13,18 +13,17 @@
 
       <ul class="nav-right">
         <li><a href="index.html">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
+        <li id="about-link">About</li>
+        <li id="portfolio-link">Portfolio</li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
 
     <div class="home">
-      <img src="img/bkbridge.jpg" alt="Brooklyn Bridge">
+      <!-- <img src="img/bkbridge.jpg" alt="Brooklyn Bridge"> -->
 
-        <h2>Opera Singer turned<br />
-        <span>Web Developer</span></h2>
-    </div>
+        <h2 id="caption-first">Opera Singer turned<br />
+        <span id="caption-second">Web Developer</span></h2>
 
     <div class="about">
       <h1>About</h1>
@@ -47,9 +46,9 @@
     <div class="portfolio">
       <h1>Projects Built</h1>
 
-      <div class="first-project">
+      <div id="first-project">
         <img src="img/ensemblify-screen-shot.png">
-        <span class="first-text"><a href="http://www.ensemblify.com/" target="blank">ensemblify</a><br/> A Rails app that pairs classical musicians with chamber ensembles
+        <span id="first-text"><a href="http://www.ensemblify.com/" target="blank">ensemblify</a><br/> A Rails app that pairs classical musicians with chamber ensembles
           <ul>
             <li>Used Facebook Omniauth to create and authenticate users</li>
             <li>Wrote intelligent matching algorithms to query the database and return appropriate matches for musicians and groups</li>
@@ -60,9 +59,9 @@
         </span>
       </div>
 
-      <div class="second-project">
+      <div id="second-project">
         <img src="img/best-stop-screen-shot.png">
-        <span class="second-text"><a href="http://best-stop.herokuapp.com/" target="blank">best stop, the <em>anti</em>-rest stop</a><br/>
+        <span id="second-text"><a href="http://best-stop.herokuapp.com/" target="blank">best stop, the <em>anti</em>-rest stop</a><br/>
           A Rails app that provides alternatives to rest stop eateries for road trips
           <ul>
            <li>Utilized the Google Maps API to display a route from start to end</li>
@@ -72,9 +71,9 @@
         </span>
       </div>
 
-      <div class="third-project">
+      <div id="third-project">
         <img src="img/petite-performer-screen-shot.png">
-        <span class="third-text"><a href="http://www.petiteperformer.com/" target="blank">petite performer</a><br/>
+        <span id="third-text"><a href="http://www.petiteperformer.com/" target="blank">petite performer</a><br/>
           A Sinatra app that searches for early childhood music classes in NYC
           <ul>
             <li>Built search functionality to query database and return appropriate matches based on location, age, and availability</li>
@@ -84,6 +83,9 @@
       </div>
 
     </div>
-
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+    <script src="js/app.js"></script>
   </body>
 </html>

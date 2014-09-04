@@ -167,6 +167,7 @@
     .navbar ul:last-child {
       margin-right: 0%; }
     .navbar ul li {
+      cursor: pointer;
       display: inline;
       *zoom: 1;
       display: inline;
@@ -194,10 +195,11 @@
         margin-right: 0%; }
 
 .home {
-  position: relative;
-  width: 100%; }
-  .home img {
-    max-width: 100%; }
+  width: 100%;
+  height: 700px;
+  background-image: url("../img/bkbridge.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%; }
   .home h2 {
     *zoom: 1;
     display: inline;
@@ -216,8 +218,7 @@
     position: absolute;
     top: 225px;
     left: 0px;
-    width: 100%;
-    background-color: none !important; }
+    width: 100%; }
     .home h2:before, .home h2:after {
       content: '';
       display: table; }
@@ -231,6 +232,8 @@
       font-weight: 500; }
 
 .about {
+  background: rgba(255, 255, 255, 0.5);
+  height: 700px;
   *zoom: 1;
   width: auto;
   max-width: 1410px;
@@ -251,7 +254,6 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     font-weight: 200;
-    background-color: white;
     padding: 10px;
     text-shadow: 1px 1px 2px #969696; }
   .about section {
@@ -363,92 +365,101 @@
     .about img:last-child {
       margin-right: 13.3%; }
 
-.portfolio h1 {
-  text-align: center;
-  font-family: "Open Sans", sans-serif;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-weight: 200;
-  background-color: white;
-  padding: 10px;
-  text-shadow: 1px 1px 2px #969696; }
-.portfolio div {
-  *zoom: 1;
-  width: auto;
-  max-width: 750px;
-  float: none;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0;
-  padding-right: 0;
-  margin-bottom: 20px;
-  -webkit-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.6);
-  -moz-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.6);
-  box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.6); }
-  .portfolio div:before, .portfolio div:after {
-    content: '';
-    display: table; }
-  .portfolio div:after {
-    clear: both; }
-  .portfolio div img {
-    cursor: pointer; }
-  .portfolio div span {
+.portfolio {
+  background: rgba(255, 255, 255, 0.3); }
+  .portfolio h1 {
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 200;
+    padding: 10px;
+    text-shadow: 1px 1px 2px #969696; }
+  .portfolio div {
+    position: relative;
+    width: 100%;
     *zoom: 1;
     width: auto;
-    max-width: 1410px;
+    max-width: 750px;
     float: none;
     display: block;
     margin-left: auto;
     margin-right: auto;
     padding-left: 0;
     padding-right: 0;
-    *zoom: 1;
-    display: inline;
-    clear: none;
-    text-align: inherit;
-    float: left;
-    width: 79.4%;
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: 10.3%;
-    margin-right: 3%;
-    padding: 20px 0;
-    font-family: "Lato", sans-serif; }
-    .portfolio div span:before, .portfolio div span:after {
+    margin-bottom: 20px;
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.6);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.6);
+    box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.6); }
+    .portfolio div:before, .portfolio div:after {
       content: '';
       display: table; }
-    .portfolio div span:after {
+    .portfolio div:after {
       clear: both; }
-    .portfolio div span:before, .portfolio div span:after {
-      content: '';
-      display: table; }
-    .portfolio div span:after {
-      clear: both; }
-    .portfolio div span:last-child {
-      margin-right: 0%; }
-    .portfolio div span a:link {
+    .portfolio div img {
+      cursor: pointer; }
+    .portfolio div span {
+      background: rgba(255, 255, 255, 0.9);
+      position: absolute;
+      top: 0px;
+      left: -77px;
+      width: 750px !important;
+      height: 322px;
       *zoom: 1;
       width: auto;
-      max-width: 300px;
+      max-width: 1410px;
       float: none;
       display: block;
       margin-left: auto;
       margin-right: auto;
       padding-left: 0;
       padding-right: 0;
-      line-height: 50px;
-      text-decoration: none;
-      font-size: 25px;
-      color: rgba(179, 46, 46, 0.9); }
-      .portfolio div span a:link:before, .portfolio div span a:link:after {
+      *zoom: 1;
+      display: inline;
+      clear: none;
+      text-align: inherit;
+      float: left;
+      width: 79.4%;
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: 10.3%;
+      margin-right: 3%;
+      padding: 20px 0;
+      font-family: "Lato", sans-serif; }
+      .portfolio div span:before, .portfolio div span:after {
         content: '';
         display: table; }
-      .portfolio div span a:link:after {
+      .portfolio div span:after {
         clear: both; }
-    .portfolio div span a:visited {
-      color: rgba(179, 46, 46, 0.9); }
-    .portfolio div span a:hover {
-      color: rgba(179, 46, 46, 0.9); }
+      .portfolio div span:before, .portfolio div span:after {
+        content: '';
+        display: table; }
+      .portfolio div span:after {
+        clear: both; }
+      .portfolio div span:last-child {
+        margin-right: 0%; }
+      .portfolio div span a:link {
+        *zoom: 1;
+        width: auto;
+        max-width: 300px;
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+        padding-right: 0;
+        line-height: 50px;
+        text-decoration: none;
+        font-size: 25px;
+        color: rgba(179, 46, 46, 0.9); }
+        .portfolio div span a:link:before, .portfolio div span a:link:after {
+          content: '';
+          display: table; }
+        .portfolio div span a:link:after {
+          clear: both; }
+      .portfolio div span a:visited {
+        color: rgba(179, 46, 46, 0.9); }
+      .portfolio div span a:hover {
+        color: rgba(179, 46, 46, 0.9); }
 
 /*# sourceMappingURL=style.css.map */

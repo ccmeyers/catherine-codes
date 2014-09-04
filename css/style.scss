@@ -26,7 +26,6 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   font-weight: 200;
-  background-color: white;
   padding: 10px;
   text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
 }
@@ -55,6 +54,7 @@
     float: right;
     margin-top: 30px;
     li {
+      cursor:pointer;
       display: inline;
       @include col(1/4);
       @include navbar-text;
@@ -64,11 +64,15 @@
 }
 
 .home {
-  position:relative;
+
   width: 100%;
-  img {
-    max-width: 100%;
-  }
+  height: 700px;
+  background-image: url("../img/bkbridge.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  // img {
+  //   max-width: 100%;
+  // }
   h2 {
     @include col(.8, $offset: .2);
     font-family: "Open Sans", sans-serif;
@@ -79,7 +83,6 @@
     top:225px;
     left:0px;
     width:100%;
-    background-color:none !important;
     span {
         color: rgba(179, 46, 46, .9);
         padding-left: 73px;
@@ -89,6 +92,8 @@
 }
 
 .about {
+  background:rgba(255,255,255, 0.5);
+  height: 700px;
   @include center;
   h1 {
     @include h1;
@@ -133,15 +138,24 @@
 }
 
 .portfolio {
+  background:rgba(255,255,255, 0.3);
   h1 {
     @include h1;
   }
   div {
+    position: relative; 
+    width: 100%;
     @include projects;
     img {
       cursor:pointer;
     }
     span {
+      background:rgba(255,255,255, 0.9);
+      position: absolute; 
+      top: 0px; 
+      left: -77px; 
+      width: 750px !important;
+      height: 322px; 
       @include center;
       @include col(.8, $offset: .1);
       padding: 20px 0;
