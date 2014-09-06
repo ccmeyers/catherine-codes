@@ -270,7 +270,7 @@
     margin-left: 10.3%;
     margin-right: 3%;
     font-family: "Lato", sans-serif;
-    font-size: 20px; }
+    font-size: 1.25em; }
     .about section:before, .about section:after {
       content: '';
       display: table; }
@@ -486,7 +486,95 @@
         .portfolio div span ul li {
           line-height: 22px; }
 
+@media screen and (max-width: 1024px) {
+  .about section {
+    *zoom: 1;
+    display: inline;
+    clear: none;
+    text-align: inherit;
+    float: left;
+    width: 48.5%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 5.15%;
+    margin-right: 3%; }
+    .about section:before, .about section:after {
+      content: '';
+      display: table; }
+    .about section:after {
+      clear: both; }
+    .about section:last-child {
+      margin-right: 0%; } }
+@media screen and (max-width: 768px) {
+  .about section {
+    *zoom: 1;
+    display: inline;
+    clear: none;
+    text-align: inherit;
+    float: left;
+    width: 48.5%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 5.15%;
+    margin-right: 3%;
+    font-size: 1em; }
+    .about section:before, .about section:after {
+      content: '';
+      display: table; }
+    .about section:after {
+      clear: both; }
+    .about section:last-child {
+      margin-right: 0%; }
+    .about section ul {
+      *zoom: 1;
+      display: inline;
+      clear: none;
+      text-align: inherit;
+      float: left;
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: 0%;
+      margin-right: 3%; }
+      .about section ul:before, .about section ul:after {
+        content: '';
+        display: table; }
+      .about section ul:after {
+        clear: both; }
+      .about section ul:last-child {
+        margin-right: 0%; }
+      .about section ul img {
+        max-height: 30px;
+        max-width: 30px; }
+  .about img {
+    *zoom: 1;
+    display: inline;
+    clear: none;
+    text-align: inherit;
+    float: left;
+    width: 48.5%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0%;
+    margin-right: 3%;
+    max-height: 400px;
+    max-width: 250px;
+    margin: 20px 0; }
+    .about img:before, .about img:after {
+      content: '';
+      display: table; }
+    .about img:after {
+      clear: both; }
+    .about img:last-child {
+      margin-right: 0%; } }
 @media screen and (max-width: 600px) {
+  .home {
+    background: url("../img/bkbridge_portrait.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+
   .navbar {
     display: block;
     clear: both;
@@ -494,7 +582,7 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    height: 140px; }
+    height: 120px; }
     .navbar:first-child {
       margin-left: auto; }
     .navbar:last-child {
@@ -548,12 +636,33 @@
       .navbar ul:last-child {
         margin-right: auto; }
 
-  .about {
-    background: rgba(192, 192, 192, 0.95);
-    height: 700px; } }
-@media screen and (max-width: 320px) {
-  .navbar .brand {
+  .about h1 {
     font-size: 1.5em; }
+  .about section {
+    *zoom: 1;
+    display: inline;
+    clear: none;
+    text-align: inherit;
+    float: left;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0%;
+    margin-right: 3%; }
+    .about section:before, .about section:after {
+      content: '';
+      display: table; }
+    .about section:after {
+      clear: both; }
+    .about section:last-child {
+      margin-right: 0%; }
+    .about section img {
+      float: right; } }
+@media screen and (max-width: 320px) {
+  .navbar {
+    height: 100px; }
+    .navbar .brand {
+      font-size: 1.5em; }
 
   .home h2 {
     *zoom: 1;
@@ -578,5 +687,13 @@
     .home h2 span {
       padding-left: 0px;
       text-shadow: none; } }
+@media screen and (max-width: 240px) {
+  .navbar .brand {
+    font-size: 1.2em; }
+  .navbar ul li {
+    font-size: .7em; }
+
+  .home h2 {
+    top: 150px; } }
 
 /*# sourceMappingURL=style.css.map */
