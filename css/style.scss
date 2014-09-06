@@ -187,3 +187,35 @@
     }
   }
 }
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    @include stack();
+    height: 140px;
+    .brand {
+      @include col(1);
+      padding-left: 20px;
+    }
+    ul {
+      @include col(1);
+      @include stack();
+      padding-left: 20px;
+    }
+  }
+  .about {
+    background:rgba(192,192,192, .95);
+    height:700px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .navbar {
+  }
+  .home {  
+    h2 {
+      @include col(1, $offset: .1);
+      span {
+        padding-left:0px;
+      }
+    }
+  }
+}

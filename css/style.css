@@ -486,4 +486,91 @@
         .portfolio div span ul li {
           line-height: 22px; }
 
+@media screen and (max-width: 600px) {
+  .navbar {
+    display: block;
+    clear: both;
+    float: none;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 140px; }
+    .navbar:first-child {
+      margin-left: auto; }
+    .navbar:last-child {
+      margin-right: auto; }
+    .navbar .brand {
+      *zoom: 1;
+      display: inline;
+      clear: none;
+      text-align: inherit;
+      float: left;
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: 0%;
+      margin-right: 3%;
+      padding-left: 20px; }
+      .navbar .brand:before, .navbar .brand:after {
+        content: '';
+        display: table; }
+      .navbar .brand:after {
+        clear: both; }
+      .navbar .brand:last-child {
+        margin-right: 0%; }
+    .navbar ul {
+      *zoom: 1;
+      display: inline;
+      clear: none;
+      text-align: inherit;
+      float: left;
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: 0%;
+      margin-right: 3%;
+      display: block;
+      clear: both;
+      float: none;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 20px; }
+      .navbar ul:before, .navbar ul:after {
+        content: '';
+        display: table; }
+      .navbar ul:after {
+        clear: both; }
+      .navbar ul:last-child {
+        margin-right: 0%; }
+      .navbar ul:first-child {
+        margin-left: auto; }
+      .navbar ul:last-child {
+        margin-right: auto; }
+
+  .about {
+    background: rgba(192, 192, 192, 0.95);
+    height: 700px; } }
+@media screen and (max-width: 320px) {
+  .home h2 {
+    *zoom: 1;
+    display: inline;
+    clear: none;
+    text-align: inherit;
+    float: left;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 10.3%;
+    margin-right: 3%; }
+    .home h2:before, .home h2:after {
+      content: '';
+      display: table; }
+    .home h2:after {
+      clear: both; }
+    .home h2:last-child {
+      margin-right: 0%; }
+    .home h2 span {
+      padding-left: 0px; } }
+
 /*# sourceMappingURL=style.css.map */
