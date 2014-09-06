@@ -64,7 +64,6 @@
 }
 
 .home {
-
   width: 100%;
   height: 700px;
   // background-image: url("../img/bkbridge.jpg");
@@ -104,7 +103,7 @@
   section {
     @include col(.5, $offset: .1);
     font-family: "Lato", sans-serif;
-    font-size: 20px;
+    font-size: 1.25em;
     img {
       opacity:.8;
     }
@@ -189,11 +188,47 @@
 }
 
 // Media Queries
+@media screen and (max-width: 1024px) {
+  .about {
+    section {
+      @include col(.5, $offset: .05);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    section {
+      @include col(.5, $offset: .05);
+      font-size: 1em;
+      ul {
+        @include col(1);
+        img {
+          max-height:30px;
+          max-width:30px;
+        }
+      }
+    }
+    img {
+    @include col(.5);
+    max-height: 400px;
+    max-width: 250px;
+    margin: 20px 0;
+    }
+  }
+}
 
 @media screen and (max-width: 600px) {
+  .home {
+    background: url("../img/bkbridge_portrait.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
   .navbar {
     @include stack();
-    height: 140px;
+    height: 120px;
     .brand {
       @include col(1);
       padding-left: 20px;
@@ -205,12 +240,28 @@
     }
   }
   .about {
-    background:rgba(192,192,192, .95);
-    height:700px;
+    h1 {
+      font-size:1.5em;
+    }
+    section {
+      @include col(1);
+      span { 
+        .resume {
+        }
+        ul {
+        }
+      }
+      img {
+        float:right;
+      }
+    }
+    // background:rgba(192,192,192, .95);
+    // height:700px;
   }
 }
 @media screen and (max-width: 320px) {
   .navbar {
+    height: 100px;
     .brand {
       font-size: 1.5em;
     }
@@ -224,6 +275,23 @@
         padding-left:0px;
         text-shadow:none;
       }
+    }
+  }
+}
+@media screen and (max-width: 240px) {
+  .navbar {
+    .brand {
+      font-size: 1.2em;
+    }
+    ul {
+      li {
+        font-size:.7em;
+      }
+    }
+  }
+  .home {
+    h2 {
+      top:150px;
     }
   }
 }
