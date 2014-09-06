@@ -133,7 +133,7 @@
     margin-left: 20.6%;
     margin-right: 3%;
     font-family: "Open Sans", sans-serif;
-    font-size: 30px;
+    font-size: 1.875em;
     letter-spacing: 1px;
     text-transform: uppercase;
     font-weight: 300;
@@ -180,12 +180,12 @@
       margin-left: 0%;
       margin-right: 3%;
       font-family: "Open Sans", sans-serif;
-      font-size: 30px;
+      font-size: 1.875em;
       letter-spacing: 1px;
       text-transform: uppercase;
       font-weight: 300;
       text-shadow: 1px 1px 2px #969696;
-      font-size: 15px; }
+      font-size: .9375em; }
       .navbar ul li:before, .navbar ul li:after {
         content: '';
         display: table; }
@@ -390,7 +390,7 @@
     margin-right: auto;
     padding-left: 0;
     padding-right: 0;
-    margin-bottom: 40px;
+    margin-bottom: 3%;
     -webkit-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.6);
     -moz-box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.6);
     box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.6); }
@@ -552,6 +552,9 @@
     background: rgba(192, 192, 192, 0.95);
     height: 700px; } }
 @media screen and (max-width: 320px) {
+  .navbar .brand {
+    font-size: 1.5em; }
+
   .home h2 {
     *zoom: 1;
     display: inline;
@@ -562,7 +565,9 @@
     padding-left: 0;
     padding-right: 0;
     margin-left: 10.3%;
-    margin-right: 3%; }
+    margin-right: 3%;
+    top: 325px;
+    text-shadow: 1px 1px 2px white; }
     .home h2:before, .home h2:after {
       content: '';
       display: table; }
@@ -571,6 +576,7 @@
     .home h2:last-child {
       margin-right: 0%; }
     .home h2 span {
-      padding-left: 0px; } }
+      padding-left: 0px;
+      text-shadow: none; } }
 
 /*# sourceMappingURL=style.css.map */
