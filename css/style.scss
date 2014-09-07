@@ -249,7 +249,7 @@
       }
     }
     img {
-      @include col(1, $offset:.22)
+      @include col(1, $offset:.22);
     }
     // background:rgba(192,192,192, .95);
     // height:700px;
@@ -257,6 +257,36 @@
   .portfolio {
     h1 {
       display: none;
+    }
+    div {
+      padding-top:3%;
+      img {
+        @include center(480px);
+        max-width: 440px;
+        box-shadow: none;
+      }
+      span {
+        @include center(480px);
+        top: 12px;
+        left: 12px; 
+        width: 440px !important;
+        height: 210px; 
+        padding:0px;
+        a:link {
+          padding-top: 30px;
+          padding-bottom: 0px;
+          @include center(300px);
+          text-decoration: none;
+          font-size: 1.5em;
+          color: rgba(179, 46, 46, .9);
+        }
+        ul {
+          margin-top: -40px;
+          li {
+            display:none;
+          }
+        }
+      }
     }
   }
 }
@@ -297,6 +327,30 @@
     }
     img {
       @include col(1, $offset:.09);
+    }
+  }
+  .portfolio {
+    div {
+      img {
+        @include center(320px);
+        max-width: 280px;
+      }
+      span {
+        @include center(320px);
+        top: 6px;
+        left: 12px; 
+        width: 280px !important;
+        height: 135px; 
+        a:link {
+          @include col($offset:.1);
+          font-size: 1.3em;
+          padding-top: 15px;
+          padding-bottom: 0px;
+        }
+        ul {
+          margin-top: -20px;
+        }
+      }
     }
   }
 }
