@@ -65,7 +65,7 @@
 
 .home {
   width: 100%;
-  height: 700px;
+  height: 1200px;
   // background-image: url("../img/bkbridge.jpg");
   background: url("../img/bkbridge.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -219,13 +219,6 @@
 }
 
 @media screen and (max-width: 600px) {
-  .home {
-    background: url("../img/bkbridge_portrait.jpg") no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
   .navbar {
     @include stack();
     height: 120px;
@@ -241,7 +234,7 @@
   }
   .about {
     h1 {
-      font-size:1.5em;
+      display: none;
     }
     section {
       @include col(1);
@@ -258,8 +251,20 @@
     // background:rgba(192,192,192, .95);
     // height:700px;
   }
+  .portfolio {
+    h1 {
+      display: none;
+    }
+  }
 }
 @media screen and (max-width: 320px) {
+  .home {
+    background: url("../img/bkbridge_portrait.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
   .navbar {
     height: 100px;
     .brand {
@@ -268,8 +273,8 @@
   }
   .home {  
     h2 {
-      @include col(1, $offset: .1);
-      top:325px;
+      @include col(1, $offset: .05);
+      top:125px;
       text-shadow: 1px 1px 2px rgba(255, 255, 255, 1);
       span {
         padding-left:0px;
