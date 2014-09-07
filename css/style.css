@@ -235,7 +235,7 @@
 
 .about {
   background: rgba(255, 255, 255, 0.5);
-  height: 700px;
+  height: 1200px;
   *zoom: 1;
   width: auto;
   max-width: 1410px;
@@ -649,25 +649,44 @@
       clear: both; }
     .about section:last-child {
       margin-right: 0%; }
-    .about section img {
-      float: right; }
-
-  .portfolio h1 {
-    display: none; } }
-@media screen and (max-width: 320px) {
-  .home {
-    background: url("../img/bkbridge_portrait.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; }
-
-  .navbar {
-    height: 100px; }
-    .navbar .brand {
+    .about section span .resume {
+      *zoom: 1;
+      display: inline;
+      clear: none;
+      text-align: inherit;
+      float: left;
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: 39.14%;
+      margin-right: 3%;
       font-size: 1.5em; }
-
-  .home h2 {
+      .about section span .resume:before, .about section span .resume:after {
+        content: '';
+        display: table; }
+      .about section span .resume:after {
+        clear: both; }
+      .about section span .resume:last-child {
+        margin-right: 0%; }
+    .about section span ul {
+      *zoom: 1;
+      display: inline;
+      clear: none;
+      text-align: inherit;
+      float: left;
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: 24.72%;
+      margin-right: 3%; }
+      .about section span ul:before, .about section span ul:after {
+        content: '';
+        display: table; }
+      .about section span ul:after {
+        clear: both; }
+      .about section span ul:last-child {
+        margin-right: 0%; }
+  .about img {
     *zoom: 1;
     display: inline;
     clear: none;
@@ -676,20 +695,109 @@
     width: 100%;
     padding-left: 0;
     padding-right: 0;
-    margin-left: 5.15%;
-    margin-right: 3%;
-    top: 175px;
-    text-shadow: 1px 1px 2px white; }
-    .home h2:before, .home h2:after {
+    margin-left: 22.66%;
+    margin-right: 3%; }
+    .about img:before, .about img:after {
       content: '';
       display: table; }
-    .home h2:after {
+    .about img:after {
       clear: both; }
-    .home h2:last-child {
+    .about img:last-child {
       margin-right: 0%; }
-    .home h2 span {
-      padding-left: 0px;
-      text-shadow: none; } }
+
+  .portfolio h1 {
+    display: none; } }
+@media screen and (max-width: 320px) {
+  .navbar {
+    height: 100px; }
+    .navbar .brand {
+      font-size: 1.5em; }
+
+  .home {
+    background: url("../img/bkbridge_portrait.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+    .home h2 {
+      *zoom: 1;
+      display: inline;
+      clear: none;
+      text-align: inherit;
+      float: left;
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: 5.15%;
+      margin-right: 3%;
+      top: 175px;
+      text-shadow: 1px 1px 2px white; }
+      .home h2:before, .home h2:after {
+        content: '';
+        display: table; }
+      .home h2:after {
+        clear: both; }
+      .home h2:last-child {
+        margin-right: 0%; }
+      .home h2 span {
+        padding-left: 0px;
+        text-shadow: none; }
+
+  .about section span .resume {
+    *zoom: 1;
+    display: inline;
+    clear: none;
+    text-align: inherit;
+    float: left;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 39.14%;
+    margin-right: 3%;
+    font-size: 1.25em; }
+    .about section span .resume:before, .about section span .resume:after {
+      content: '';
+      display: table; }
+    .about section span .resume:after {
+      clear: both; }
+    .about section span .resume:last-child {
+      margin-right: 0%; }
+  .about section span ul {
+    *zoom: 1;
+    display: inline;
+    clear: none;
+    text-align: inherit;
+    float: left;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 12.36%;
+    margin-right: 3%; }
+    .about section span ul:before, .about section span ul:after {
+      content: '';
+      display: table; }
+    .about section span ul:after {
+      clear: both; }
+    .about section span ul:last-child {
+      margin-right: 0%; }
+  .about img {
+    *zoom: 1;
+    display: inline;
+    clear: none;
+    text-align: inherit;
+    float: left;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 9.27%;
+    margin-right: 3%; }
+    .about img:before, .about img:after {
+      content: '';
+      display: table; }
+    .about img:after {
+      clear: both; }
+    .about img:last-child {
+      margin-right: 0%; } }
 @media screen and (max-width: 240px) {
   .navbar .brand {
     font-size: 1.2em; }
@@ -697,6 +805,77 @@
     font-size: .7em; }
 
   .home h2 {
-    top: 150px; } }
+    top: 150px; }
+
+  .about section span .resume {
+    *zoom: 1;
+    display: inline;
+    clear: none;
+    text-align: inherit;
+    float: left;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 32.96%;
+    margin-right: 3%;
+    font-size: 1.25em; }
+    .about section span .resume:before, .about section span .resume:after {
+      content: '';
+      display: table; }
+    .about section span .resume:after {
+      clear: both; }
+    .about section span .resume:last-child {
+      margin-right: 0%; }
+  .about section span ul {
+    *zoom: 1;
+    display: inline;
+    clear: none;
+    text-align: inherit;
+    float: left;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 8.24%;
+    margin-right: 3%; }
+    .about section span ul:before, .about section span ul:after {
+      content: '';
+      display: table; }
+    .about section span ul:after {
+      clear: both; }
+    .about section span ul:last-child {
+      margin-right: 0%; }
+    .about section span ul li {
+      *zoom: 1;
+      float: left;
+      clear: none;
+      text-align: inherit;
+      width: 16.66667%;
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: 0%;
+      margin-right: 0%; }
+      .about section span ul li:before, .about section span ul li:after {
+        content: '';
+        display: table; }
+      .about section span ul li:after {
+        clear: both; }
+  .about img {
+    *zoom: 1;
+    display: inline;
+    clear: none;
+    text-align: inherit;
+    float: left;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0%;
+    margin-right: 3%; }
+    .about img:before, .about img:after {
+      content: '';
+      display: table; }
+    .about img:after {
+      clear: both; }
+    .about img:last-child {
+      margin-right: 0%; } }
 
 /*# sourceMappingURL=style.css.map */
