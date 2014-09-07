@@ -95,7 +95,7 @@
 
 .about {
   background:rgba(255,255,255, 0.5);
-  height: 700px;
+  height: 1200px;
   @include center;
   h1 {
     @include h1;
@@ -240,13 +240,16 @@
       @include col(1);
       span { 
         .resume {
+          @include col(1, $offset:.38);
+          font-size: 1.5em;
         }
         ul {
+          @include col(1, $offset:.24);
         }
       }
-      img {
-        float:right;
-      }
+    }
+    img {
+      @include col(1, $offset:.22)
     }
     // background:rgba(192,192,192, .95);
     // height:700px;
@@ -258,13 +261,6 @@
   }
 }
 @media screen and (max-width: 320px) {
-  .home {
-    background: url("../img/bkbridge_portrait.jpg") no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
   .navbar {
     height: 100px;
     .brand {
@@ -272,6 +268,11 @@
     }
   }
   .home {  
+    background: url("../img/bkbridge_portrait.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     h2 {
       @include col(1, $offset: .05);
       top:175px;
@@ -282,7 +283,24 @@
       }
     }
   }
+  .about {
+    section {
+      span {
+        .resume {
+          @include col(1, $offset:.38);
+          font-size: 1.25em;
+        }
+        ul {
+          @include col(1, $offset:.12);
+        }
+      }
+    }
+    img {
+      @include col(1, $offset:.09);
+    }
+  }
 }
+
 @media screen and (max-width: 240px) {
   .navbar {
     .brand {
@@ -297,6 +315,25 @@
   .home {
     h2 {
       top:150px;
+    }
+  }
+  .about {
+    section {
+      span {
+        .resume {
+          @include col(1, $offset:.32);
+          font-size: 1.25em;
+        }
+        ul {
+          @include col(1, $offset:.08);
+          li {
+            @include span(1/6);
+          }
+        }
+      }
+    }
+    img {
+      @include col(1);
     }
   }
 }
