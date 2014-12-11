@@ -30,29 +30,39 @@
   text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
 }
 
+body {
+  margin: 0;
+}
+
 .navbar {
   background-color: white;
   height: 80px;
   color: black;
+
   a:link {
     text-decoration: none;
     color: black;
   }
+
   a:visited {
     color: black;
   }
+
   a:hover {
     color: black;
   }
+
   .brand {
     @include col(.6, $offset: .2);
     @include navbar-text;
     margin: 20px 0 20px 40px;
   }
+
   ul {
     @include col(.3);
     float: right;
     margin-top: 30px;
+
     li {
       cursor:pointer;
       display: inline;
@@ -60,21 +70,19 @@
       @include navbar-text;
       font-size: .9375em;
     }
+
   }
+
 }
 
 .home {
   width: 100%;
-  height: 1200px;
-  // background-image: url("../img/bkbridge.jpg");
   background: url("../img/bkbridge.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  // img {
-  //   max-width: 100%;
-  // }
+
   h2 {
     @include col(.8, $offset: .2);
     font-family: "Open Sans", sans-serif;
@@ -84,42 +92,51 @@
     position:absolute;
     top:225px;
     left:0px;
-    width:100%;
+
     span {
         color: rgba(179, 46, 46, .9);
         padding-left: 73px;
         font-weight: 500;
     }
+
   }
+
 }
 
 .about {
   background:rgba(255,255,255, 0.5);
-  height: 1200px;
   @include center;
+
   h1 {
     @include h1;
   }
+
   section {
     @include col(.5, $offset: .1);
     font-family: "Lato", sans-serif;
     font-size: 1.25em;
+
     img {
       opacity:.8;
     }
+
     a:link {
       text-decoration: none;
       color: #3866B5;
     }
+
     a:visited {
       color: #3866B5;
     }
+
     a:hover {
       color: #3866B5;
     }
+
     .resume {
       @include col(.2, $offset:.8);
     }
+
     ul {
       @include col(.75, $offset:.25);
       list-style-type: none;
@@ -129,29 +146,37 @@
         max-height:40px;
         max-width:40px;
       }
+
     }
+
   }
+
   img {
     @include col(.4, $offset: -.1);
     max-height: 450px;
     max-width: 300px;
     margin: 20px 0;
   }
+
 }
 
 .portfolio {
   background:rgba(192,192,192, .95);
   height:1300px;
+
   h1 {
     @include h1;
   }
+
   div {
     position: relative; 
     width: 100%;
     @include projects;
+
     img {
       cursor:pointer;
     }
+
     span {
       background:rgba(255,255,255, .95);
       position: absolute; 
@@ -163,6 +188,7 @@
       @include col(.8, $offset: .1);
       padding: 20px 0;
       font-family: "Lato", sans-serif;
+
       a:link {
         padding-top: 30px;
         @include center(300px);
@@ -171,100 +197,138 @@
         font-size: 25px;
         color: rgba(179, 46, 46, .9);
       }
+
       a:visited {
         color: rgba(179, 46, 46, .9);
       }
+
       a:hover {
         color: rgba(179, 46, 46, .9);
       }
+
       ul {
         @include col(.8, $offset:.15);
         li {
           line-height:22px;
         }
+
       }
+
     }
+
   }
+
 }
 
 // Media Queries
 @media screen and (max-width: 1024px) {
+
   .about {
+
     section {
       @include col(.5, $offset: .05);
     }
+
   }
+
 }
 
 @media screen and (max-width: 768px) {
+
   .about {
+
     section {
+
       @include col(.5, $offset: .05);
       font-size: 1em;
+
       ul {
         @include col(1);
+
         img {
           max-height:30px;
           max-width:30px;
         }
+
       }
+
     }
+
     img {
     @include col(.5);
     max-height: 400px;
     max-width: 250px;
     margin: 20px 0;
     }
+
   }
+
 }
 
 @media screen and (max-width: 600px) {
+
   .navbar {
     @include stack();
     height: 120px;
+
     .brand {
       @include col(1);
       padding-left: 20px;
     }
+
     ul {
       @include col(1);
       @include stack();
       padding-left: 20px;
     }
+
   }
+
   .about {
+
     h1 {
       display: none;
     }
+
     section {
       @include col(1);
+
       span { 
+
         .resume {
           @include col(1, $offset:.38);
           font-size: 1.5em;
         }
+
         ul {
           @include col(1, $offset:.24);
         }
+
       }
+
     }
+
     img {
       @include col(1, $offset:.22);
     }
-    // background:rgba(192,192,192, .95);
-    // height:700px;
+
   }
+
   .portfolio {
+
     h1 {
       display: none;
     }
+
     div {
       padding-top:3%;
+
       img {
         @include center(480px);
         max-width: 440px;
         box-shadow: none;
       }
+
       span {
         @include center(480px);
         top: 12px;
@@ -280,114 +344,171 @@
           font-size: 1.5em;
           color: rgba(179, 46, 46, .9);
         }
+
         ul {
           margin-top: -40px;
+
           li {
             display:none;
           }
+
         }
+
       }
+
     }
+
   }
+
 }
+
 @media screen and (max-width: 320px) {
+
   .navbar {
     height: 100px;
+
     .brand {
       font-size: 1.5em;
     }
+
   }
+
   .home {  
     background: url("../img/bkbridge_portrait.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+
     h2 {
       @include col(1, $offset: .05);
       top:175px;
       text-shadow: 1px 1px 2px rgba(255, 255, 255, 1);
+
       span {
         padding-left:0px;
         text-shadow:none;
       }
+
     }
+
   }
+
   .about {
+
     section {
+
       span {
+
         .resume {
+
           @include col(1, $offset:.38);
           font-size: 1.25em;
         }
+
         ul {
           @include col(1, $offset:.12);
         }
+
       }
+
     }
+
     img {
       @include col(1, $offset:.09);
     }
+
   }
+
   .portfolio {
+
     div {
+
       img {
         @include center(320px);
         max-width: 280px;
       }
+
       span {
         @include center(320px);
         top: 6px;
         left: 12px; 
         width: 280px !important;
         height: 135px; 
+
         a:link {
           @include col($offset:.1);
           font-size: 1.3em;
           padding-top: 15px;
           padding-bottom: 0px;
         }
+
         ul {
           margin-top: -20px;
         }
+
       }
+
     }
+
   }
+
 }
 
 @media screen and (max-width: 240px) {
+
   .navbar {
+
     .brand {
       font-size: 1.2em;
     }
+
     ul {
+
       li {
         font-size:.7em;
       }
+
     }
+
   }
+
   .home {
+
     h2 {
       top:150px;
     }
+
   }
+
   .about {
+
     section {
+
       span {
+
         .resume {
           @include col(1, $offset:.32);
           font-size: 1.25em;
         }
+
         ul {
           @include col(1, $offset:.08);
+
           li {
             @include span(1/6);
           }
+
         }
+
       }
+
     }
+
     img {
       @include col(1);
     }
+
   }
+
 }

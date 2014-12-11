@@ -110,6 +110,9 @@
  * Apply a clearfix to an element.
  */
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:800,600,400,300|Open+Sans+Condensed:300,700|Lato:100,300,400);
+body {
+  margin: 0; }
+
 .navbar {
   background-color: white;
   height: 80px;
@@ -196,7 +199,6 @@
 
 .home {
   width: 100%;
-  height: 1200px;
   background: url("../img/bkbridge.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -219,8 +221,7 @@
     font-weight: 200;
     position: absolute;
     top: 225px;
-    left: 0px;
-    width: 100%; }
+    left: 0px; }
     .home h2:before, .home h2:after {
       content: '';
       display: table; }
@@ -235,7 +236,6 @@
 
 .about {
   background: rgba(255, 255, 255, 0.5);
-  height: 1200px;
   *zoom: 1;
   width: auto;
   max-width: 1410px;

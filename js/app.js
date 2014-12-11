@@ -1,12 +1,23 @@
 $(function(){
 
-  var $firstText = $("#first-text"),
+  var $windowHeight = $(window).height(),
+      $navHeight = $(".navbar").height(),
+      $firstText = $("#first-text"),
       $secondText = $("#second-text"),
       $thirdText = $("#third-text"),
       $about = $(".about"),
       $captionFirst = $("#caption-first"),
       $captionSecond = $("#caption-second"),
       $portfolio = $(".portfolio");
+
+  var bgHeight = $windowHeight - $navHeight;
+
+  console.log(bgHeight);
+
+  $(window).on('load', function(){
+    $(".home").css("height", bgHeight);
+    $(".about").css("height", bgHeight);
+  });
 
   $firstText.hide();
   $secondText.hide();
