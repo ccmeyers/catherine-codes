@@ -8,15 +8,23 @@ $(function(){
       $about = $(".about"),
       $captionFirst = $("#caption-first"),
       $captionSecond = $("#caption-second"),
-      $portfolio = $(".portfolio");
+      $portfolio = $(".portfolio"),
+      $bgHeight = $windowHeight - $navHeight,
+      $portfolioH1 = $('.portfolio h1').outerHeight(true);
+  console.log('$portfolioH1', $portfolioH1);
+  var portfolioHeight = $portfolioH1;
 
-  var bgHeight = $windowHeight - $navHeight;
+  $('.project').each(function(){
+    var $this = $(this);
+    portfolioHeight +=  $this.outerHeight(true);
+  });
 
-  console.log(bgHeight);
+  console.log('portfolioHeight', portfolioHeight);
 
   $(window).on('load', function(){
-    $(".home").css("height", bgHeight);
-    $(".about").css("height", bgHeight);
+    $(".home").css("height", $bgHeight);
+    $about.css("height", $bgHeight);
+    $portfolio.css("height", portfolioHeight);
   });
 
   $firstText.hide();
