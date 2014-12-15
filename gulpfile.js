@@ -20,9 +20,9 @@ gulp.task('gulpfile', function () {
 });
 
 gulp.task('less', function () {
-  gulp.src('./css/less/*.less')
+  gulp.src('./css/less/style.less')
     .pipe(less({
-      paths: ['./css/less/bootstrap']
+      paths: ['./css/less/**/*.less']
     }))
     .pipe(gulp.dest('./css'))
     .pipe(connect.reload());
@@ -30,7 +30,7 @@ gulp.task('less', function () {
 
 gulp.task('watch', function() {
    // Watch .less files
-  gulp.watch('css/less/style.less', ['less']);
+  gulp.watch(['css/less/style.less'], ['less']);
   gulp.watch(['./index.html'], ['html']);
   gulp.watch(['./gulpfile.js'], ['gulpfile']);
  });
