@@ -1,0 +1,37 @@
+.portfolio {
+
+  background-color: $lightblue;
+  color: white;
+  padding: 100px 0;
+
+  h1 {
+    text-align: center;
+    margin: 0;
+  }
+
+  h2 {
+    text-align: center;
+    margin: 0;
+  }
+
+  .back-end {
+
+    .back-end-detail {
+      @include span-columns(4);
+      background-color: white;
+      height: 250px;
+    }
+    
+  }
+
+  .front-end {
+
+    .front-end-detail {
+      @include span-columns(3);
+      background-color: white;
+      height: 250px;
+    }
+
+  }
+
+}

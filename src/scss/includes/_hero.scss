@@ -1,0 +1,23 @@
+.hero {
+  background: url('../images/bkbridge.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 250px 0;
+
+  .header {
+    @include shift(1.5);
+
+    h1 {
+      margin: 0;
+      @include h1-font;
+      font-size: 40px;
+
+      &:last-child {
+        color: $wine;
+        margin-left: 165px;
+      }
+
+    }
+    
+  }
+
+}

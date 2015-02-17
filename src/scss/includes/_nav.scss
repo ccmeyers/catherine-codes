@@ -1,0 +1,43 @@
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.9);
+  padding: 15px 3.75%;
+  z-index: 100;
+  text-transform: uppercase;
+
+  a {
+    text-decoration: none;
+    color: $darkestGray;
+    @include navbar-text;
+
+    &:hover {
+      color: $wine;
+      @include transition(color 0.2s ease-in-out);
+    }
+
+    &.active {
+      color: $wine;
+    }
+
+  }
+
+  .logo {
+    float: left;
+    font-size: 30px;
+  }
+
+  .nav-items {
+    float: right;
+    margin: 7px 0;
+
+    a {
+      margin-left: 25px;
+      font-size: 20px;
+    }
+
+  }
+
+}
