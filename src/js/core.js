@@ -18,10 +18,8 @@ var app = {
     app.documentWindow.on('load', app.heroHeightSetter);
     app.documentWindow.on('resize', app.heroHeightSetter);
     app.documentWindow.on('orientationchange', app.heroHeightSetter);
-    app.homeJumper();
-    app.portfolioJumper();
-    app.aboutJumper();
-    app.navHighlight();
+    app.navJumper();
+    app.navHighlighter();
   },
 
   heroHeightSetter: function() {
@@ -29,8 +27,8 @@ var app = {
     app.hero.css('height', windowHeight - 20);
   },
 
-  homeJumper: function() {
-    app.homeLink.on('click', function(){
+  navJumper: function() {
+    app.homeLink.add(app.portfolioLink).add(app.aboutLink).on('click', function(){
       var navHeight = app.navbar.outerHeight();
       $('.active').removeClass('active');
       $('html, body').animate({
@@ -40,31 +38,7 @@ var app = {
     });
   },
 
-  portfolioJumper: function() {
-    app.portfolioLink.on('click', function(){
-      var navHeight = app.navbar.outerHeight();
-      $('.active').removeClass('active');
-      $(this).addClass('active');
-      $('html, body').animate({
-          scrollTop: $( $.attr(this, 'href') ).offset().top - navHeight + 1
-      }, 500);
-      return false;
-    });
-  },
-
-  aboutJumper: function() {
-    app.aboutLink.on('click', function(){
-      var navHeight = app.navbar.outerHeight();
-      $('.active').removeClass('active');
-      $(this).addClass('active');
-      $('html, body').animate({
-          scrollTop: $( $.attr(this, 'href') ).offset().top - navHeight + 1
-      }, 500);
-      return false;
-    });
-  },
-
-  navHighlight: function() {
+  navHighlighter: function() {
     app.documentWindow.on('scroll', function(){
       var scrollTop = $(this).scrollTop(),
           navHeight = app.navbar.outerHeight(),

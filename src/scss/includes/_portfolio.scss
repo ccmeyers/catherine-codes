@@ -7,11 +7,15 @@
   h1 {
     text-align: center;
     margin: 0;
+    @include h1-font;
+    font-size: 36px;
   }
 
   h2 {
     text-align: center;
-    margin: 0;
+    margin: 40px 0 20px;
+    @include h1-font;
+    font-size: 26px;
   }
 
   .back-end {

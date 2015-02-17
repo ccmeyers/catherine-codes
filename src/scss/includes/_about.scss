@@ -10,6 +10,38 @@
     h1 {
       text-align: center;
       margin: 0;
+      @include h1-font;
+    }
+
+    .text {
+      @include span-columns(9);
+      font-family: "Lato", sans-serif;
+      line-height: 1.4;
+
+      a {
+        color: $wine;
+        text-decoration: none;
+      }
+
+      .social {
+        margin-top: 30px;
+
+        img {
+          width: 40px;
+          margin-right: 10px;
+        }
+
+      }
+
+    }
+
+    .pic {
+      @include span-columns(3);
+
+      img {
+        max-width: 100%;
+      }
+
     }
 
   }
