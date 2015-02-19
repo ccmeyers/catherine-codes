@@ -6,6 +6,8 @@ var $ = require('jquery-browserify'),
 var app = {
 
   documentWindow: $(window),
+  firstHeader: $('#first-header'),
+  secondHeader: $('#second-header'),
   homeLink: $('.home-link'),
   portfolioLink: $('.portfolio-link'),
   aboutLink: $('.about-link'),
@@ -14,12 +16,20 @@ var app = {
   portfolio: $('.portfolio'),
 
   init: function() {
+    app.displayHeader();
     app.heroHeightSetter();
     app.documentWindow.on('load', app.heroHeightSetter);
     app.documentWindow.on('resize', app.heroHeightSetter);
     app.documentWindow.on('orientationchange', app.heroHeightSetter);
     app.navJumper();
     app.navHighlighter();
+  },
+
+  displayHeader: function() {
+    app.firstHeader.hide()
+    app.secondHeader.hide()
+    app.firstHeader.delay(500).fadeIn(1500);
+    app.secondHeader.delay(1500).fadeIn(1500);
   },
 
   heroHeightSetter: function() {

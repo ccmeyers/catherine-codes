@@ -18,6 +18,21 @@
     font-size: 26px;
   }
 
+  .front-end {
+
+    .front-end-detail {
+      @include span-columns(3);
+      background: rgba(255,255,255,0.95) url('../images/valet-anywhere.png') no-repeat center center;
+      background-size: contain;
+      height: 250px;
+
+      &:nth-child(2) {
+        background-image: url('../images/shapeup.png');
+      }
+    }
+
+  }
+
   .back-end {
 
     .back-end-detail {
@@ -26,16 +41,6 @@
       height: 250px;
     }
     
-  }
-
-  .front-end {
-
-    .front-end-detail {
-      @include span-columns(3);
-      background-color: white;
-      height: 250px;
-    }
-
   }
 
 }

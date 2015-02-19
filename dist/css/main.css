@@ -405,6 +405,18 @@ td, th {
     text-transform: uppercase;
     font-weight: 200;
     font-size: 26px; }
+  .portfolio .front-end .front-end-detail {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+    background: rgba(255, 255, 255, 0.95) url('../images/valet-anywhere.png') no-repeat center center;
+    background-size: contain;
+    height: 250px; }
+    .portfolio .front-end .front-end-detail:last-child {
+      margin-right: 0; }
+    .portfolio .front-end .front-end-detail:nth-child(2) {
+      background-image: url('../images/shapeup.png'); }
   .portfolio .back-end .back-end-detail {
     float: left;
     display: block;
@@ -413,15 +425,6 @@ td, th {
     background-color: white;
     height: 250px; }
     .portfolio .back-end .back-end-detail:last-child {
-      margin-right: 0; }
-  .portfolio .front-end .front-end-detail {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 23.23176%;
-    background-color: white;
-    height: 250px; }
-    .portfolio .front-end .front-end-detail:last-child {
       margin-right: 0; }
 
 .about {
