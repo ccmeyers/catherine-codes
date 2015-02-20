@@ -1,19 +1,28 @@
 .hero {
-  // background: url('../images/bkbridge.jpg') no-repeat center center;
-  // background-size: cover;
-  padding: 250px 0;
+  text-align: center;
 
   .header {
-    @include shift(1.5);
+
+    img {
+      width: 50px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    #html-tags {
+      width: 60px;
+    }
 
     h1 {
+      display: inline-block;
+      vertical-align: middle;
       margin: 0;
       @include h1-font;
       font-size: 40px;
+      margin: 0 25px;
 
-      &:last-child {
+      span {
         color: $wine;
-        margin-left: 165px;
       }
 
     }

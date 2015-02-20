@@ -6,13 +6,15 @@ var $ = require('jquery-browserify'),
 var app = {
 
   documentWindow: $(window),
-  firstHeader: $('#first-header'),
-  secondHeader: $('#second-header'),
+  musicNotes: $('#music-notes'),
+  htmlTags: $('#html-tags'),
   homeLink: $('.home-link'),
   portfolioLink: $('.portfolio-link'),
   aboutLink: $('.about-link'),
   navbar: $('.navigation'),
   hero: $('.hero'),
+  heroHeader: $('.header'),
+  heroHeaderHeight: $('.header').height(),
   portfolio: $('.portfolio'),
 
   init: function() {
@@ -26,15 +28,15 @@ var app = {
   },
 
   displayHeader: function() {
-    app.firstHeader.hide()
-    app.secondHeader.hide()
-    app.firstHeader.delay(500).fadeIn(1500);
-    app.secondHeader.delay(1500).fadeIn(1500);
+    app.htmlTags.hide()
+    app.musicNotes.delay(1000).fadeOut(1500);
+    app.htmlTags.delay(1500).fadeIn(1500);
   },
 
   heroHeightSetter: function() {
     var windowHeight = app.documentWindow.height();
     app.hero.css('height', windowHeight - 20);
+    app.heroHeader.css('padding-top', (windowHeight/2)-(app.heroHeaderHeight/2));
   },
 
   navJumper: function() {
