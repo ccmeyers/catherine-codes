@@ -2,6 +2,10 @@
 
   background-color: $darkGray;
   padding: 100px 0;
+  
+  @include media($desktop) {
+    padding: 75px 0;
+  }
 
   .container-inner {
     background-color: rgba(255,255,255,0.9);

@@ -368,13 +368,94 @@ td, th {
     .navigation .nav-items a {
       margin-left: 25px;
       font-size: 20px; }
+    @media screen and (max-width: 768px)  {
+      .navigation .nav-items {
+        position: absolute;
+        left: 0;
+        height: 0;
+        overflow: hidden;
+        top: 72px;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.95);
+        margin: 0;
+        padding: 0;
+        -webkit-transition: height 500ms, padding 500ms;
+        -moz-transition: height 500ms, padding 500ms;
+        transition: height 500ms, padding 500ms; }
+        .navigation .nav-items.is-open {
+          height: 250px;
+          padding: 20px; } }
+  .navigation .hamburger {
+    display: none;
+    padding: 10px;
+    float: right;
+    cursor: pointer; }
+    @media screen and (max-width: 768px)  {
+      .navigation .hamburger {
+        display: block; } }
+    .navigation .hamburger .line-wrapper {
+      transition: transform 300ms; }
+      .navigation .hamburger .line-wrapper .line1, .navigation .hamburger .line-wrapper .line2, .navigation .hamburger .line-wrapper .line3 {
+        width: 30px;
+        height: 2px;
+        margin: 0 0 5px 0;
+        display: block;
+        border-bottom: 1px solid #222222;
+        border-radius: 4px;
+        transition: transform 300ms; }
+    .navigation .hamburger.is-open .line-wrapper {
+      -webkit-transform: rotate(45deg) translateY(3px);
+      -moz-transform: rotate(45deg) translateY(3px);
+      -ms-transform: rotate(45deg) translateY(3px);
+      -o-transform: rotate(45deg) translateY(3px);
+      transform: rotate(45deg) translateY(3px); }
+    .navigation .hamburger.is-open .line2 {
+      -webkit-transform: translateY(-7px) rotate(90deg);
+      -moz-transform: translateY(-7px) rotate(90deg);
+      -ms-transform: translateY(-7px) rotate(90deg);
+      -o-transform: translateY(-7px) rotate(90deg);
+      transform: translateY(-7px) rotate(90deg); }
+    .navigation .hamburger.is-open .line3 {
+      -webkit-transform: translateY(-13.5px) rotate(90deg);
+      -moz-transform: translateY(-13.5px) rotate(90deg);
+      -ms-transform: translateY(-13.5px) rotate(90deg);
+      -o-transform: translateY(-13.5px) rotate(90deg);
+      transform: translateY(-13.5px) rotate(90deg); }
 
 .hero {
   text-align: center; }
-  .hero .header img {
-    width: 50px;
+  .hero .header-before {
     display: inline-block;
+    height: 70px;
+    width: 70px;
+    background: url('../images/treble-clef.png') no-repeat center center;
+    background: url('../images/treble-clef.svg') no-repeat center center;
+    background-size: contain;
     vertical-align: middle; }
+    .hero .header-before.swapper {
+      height: 60px;
+      width: 60px;
+      background-image: url('../images/tag-open.png');
+      background-size: contain;
+      -webkit-transition: all 1s ease-in 2s;
+      -moz-transition: all 1s ease-in 2s;
+      transition: all 1s ease-in 2s; }
+  .hero .header-after {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    background: url('../images/eighth-note-single.png') no-repeat center center;
+    background: url('../images/eighth-note-single.svg') no-repeat center center;
+    background-size: contain;
+    vertical-align: middle; }
+    .hero .header-after.swapper {
+      height: 60px;
+      width: 60px;
+      background-image: url('../images/tag-close.png');
+      background-size: contain;
+      -webkit-transition: all 1s ease-in 2s;
+      -moz-transition: all 1s ease-in 2s;
+      transition: all 1s ease-in 2s; }
   .hero .header #html-tags {
     width: 60px; }
   .hero .header h1 {
@@ -386,7 +467,7 @@ td, th {
     text-transform: uppercase;
     font-weight: 200;
     font-size: 40px;
-    margin: 0 25px; }
+    margin: 0 10px; }
     .hero .header h1 span {
       color: #9A0000; }
 
@@ -394,6 +475,9 @@ td, th {
   background-color: #394F6B;
   color: white;
   padding: 100px 0; }
+  @media screen and (max-width: 1280px)  {
+    .portfolio {
+      padding: 75px 0; } }
   .portfolio h1 {
     text-align: center;
     margin: 0;
@@ -410,31 +494,102 @@ td, th {
     text-transform: uppercase;
     font-weight: 200;
     font-size: 26px; }
-  .portfolio .front-end .front-end-detail {
+  .portfolio .front-end .detail {
+    position: relative;
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 23.23176%;
-    background: rgba(255, 255, 255, 0.95) url('../images/valet-anywhere.png') no-repeat center center;
+    background: rgba(255, 255, 255, 0.9) url('../images/valet-anywhere-logo.png') no-repeat center center;
     background-size: contain;
-    height: 250px; }
-    .portfolio .front-end .front-end-detail:last-child {
+    height: 250px;
+    overflow: hidden; }
+    .portfolio .front-end .detail:last-child {
       margin-right: 0; }
-    .portfolio .front-end .front-end-detail:nth-child(2) {
-      background-image: url('../images/shapeup.png'); }
-  .portfolio .back-end .back-end-detail {
+    .portfolio .front-end .detail.shapeup {
+      background-image: url('../images/shapeup-logo.png'); }
+    .portfolio .front-end .detail.smith {
+      background-image: url('../images/smith-logo-blue.png'); }
+    .portfolio .front-end .detail.hippodrome {
+      background-image: url('../images/hippodrome-logo-blue.png'); }
+    .portfolio .front-end .detail:hover .overlay {
+      top: 0;
+      -webkit-transition: all 0.6s ease-in;
+      -moz-transition: all 0.6s ease-in;
+      transition: all 0.6s ease-in;
+      -webkit-transform: translateX(-15%) translateY(-16%) rotate(45deg);
+      -moz-transform: translateX(-15%) translateY(-16%) rotate(45deg);
+      -ms-transform: translateX(-15%) translateY(-16%) rotate(45deg);
+      -o-transform: translateX(-15%) translateY(-16%) rotate(45deg);
+      transform: translateX(-15%) translateY(-16%) rotate(45deg); }
+    .portfolio .front-end .detail .overlay {
+      position: absolute;
+      top: -250px;
+      background-color: rgba(0, 0, 0, 0.9);
+      height: 145%;
+      width: 146%;
+      -webkit-transform: translateX(-85%) translateY(-15%) rotate(45deg);
+      -moz-transform: translateX(-85%) translateY(-15%) rotate(45deg);
+      -ms-transform: translateX(-85%) translateY(-15%) rotate(45deg);
+      -o-transform: translateX(-85%) translateY(-15%) rotate(45deg);
+      transform: translateX(-85%) translateY(-15%) rotate(45deg); }
+      .portfolio .front-end .detail .overlay img {
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        margin-top: 35%;
+        margin-left: 12%; }
+  .portfolio .back-end .detail {
+    position: relative;
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 31.76157%;
+    width: 23.23176%;
     background-color: white;
-    height: 250px; }
-    .portfolio .back-end .back-end-detail:last-child {
+    height: 250px;
+    overflow: hidden; }
+    .portfolio .back-end .detail:last-child {
       margin-right: 0; }
+    .portfolio .back-end .detail:first-child {
+      margin-left: 12.79471%; }
+    .portfolio .back-end .detail:hover .overlay {
+      top: 0;
+      -webkit-transition: all 0.6s ease-in;
+      -moz-transition: all 0.6s ease-in;
+      transition: all 0.6s ease-in;
+      -webkit-transform: translateX(-15%) translateY(-16%) rotate(45deg);
+      -moz-transform: translateX(-15%) translateY(-16%) rotate(45deg);
+      -ms-transform: translateX(-15%) translateY(-16%) rotate(45deg);
+      -o-transform: translateX(-15%) translateY(-16%) rotate(45deg);
+      transform: translateX(-15%) translateY(-16%) rotate(45deg); }
+    .portfolio .back-end .detail .overlay {
+      position: absolute;
+      top: -250px;
+      background-color: rgba(0, 0, 0, 0.9);
+      height: 145%;
+      width: 146%;
+      -webkit-transform: translateX(-85%) translateY(-15%) rotate(45deg);
+      -moz-transform: translateX(-85%) translateY(-15%) rotate(45deg);
+      -ms-transform: translateX(-85%) translateY(-15%) rotate(45deg);
+      -o-transform: translateX(-85%) translateY(-15%) rotate(45deg);
+      transform: translateX(-85%) translateY(-15%) rotate(45deg); }
+      .portfolio .back-end .detail .overlay img {
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        margin-top: 35%;
+        margin-left: 12%; }
 
 .about {
   background-color: #666666;
   padding: 100px 0; }
+  @media screen and (max-width: 1280px)  {
+    .about {
+      padding: 75px 0; } }
   .about .container-inner {
     background-color: rgba(255, 255, 255, 0.9);
     padding: 100px; }
@@ -474,7 +629,28 @@ td, th {
 
 body {
   -webkit-font-smoothing: antialiased;
-  color: #222222; }
+  color: #222222;
+  @-webkit-keyframes swap {
+    0% {
+      background-image: url('../images/treble-clef.png'); }
+
+    100% {
+      background-image: url('../images/tags.png'); } }
+
+  @-moz-keyframes swap {
+    0% {
+      background-image: url('../images/treble-clef.png'); }
+
+    100% {
+      background-image: url('../images/tags.png'); } }
+
+  @keyframes swap {
+    0% {
+      background-image: url('../images/treble-clef.png'); }
+
+    100% {
+      background-image: url('../images/tags.png'); } }
+ }
   body .container {
     max-width: 100%;
     margin-left: auto;

@@ -3,10 +3,42 @@
 
   .header {
 
-    img {
-      width: 50px;
+    &-before {
       display: inline-block;
+      height: 70px;
+      width: 70px;
+      background: url('../images/treble-clef.png') no-repeat center center;
+      background: url('../images/treble-clef.svg') no-repeat center center;
+      background-size: contain;
       vertical-align: middle;
+
+      &.swapper {
+        height: 60px;
+        width: 60px;
+        background-image: url('../images/tag-open.png');
+        background-size: contain;
+        @include transition(all 1s ease-in 2s);
+      }
+      
+    }
+
+    &-after {
+      display: inline-block;
+      height: 50px;
+      width: 50px;
+      background: url('../images/eighth-note-single.png') no-repeat center center;
+      background: url('../images/eighth-note-single.svg') no-repeat center center;
+      background-size: contain;
+      vertical-align: middle;
+      
+      &.swapper {
+        height: 60px;
+        width: 60px;
+        background-image: url('../images/tag-close.png');
+        background-size: contain;
+        @include transition(all 1s ease-in 2s);
+      }
+
     }
 
     #html-tags {
@@ -19,7 +51,7 @@
       margin: 0;
       @include h1-font;
       font-size: 40px;
-      margin: 0 25px;
+      margin: 0 10px;
 
       span {
         color: $wine;

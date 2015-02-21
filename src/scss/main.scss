@@ -28,4 +28,9 @@ body {
     @include row();
   }
 
+  @include keyframes(swap) {
+    0%   { background-image: url('../images/treble-clef.png') }
+    100% { background-image: url('../images/tags.png') }
+  }
+
 }

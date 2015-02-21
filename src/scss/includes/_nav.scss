@@ -39,6 +39,69 @@
       font-size: 20px;
     }
 
+    @include media($tab_port) {
+      position: absolute;
+      left: 0;
+      height: 0;
+      overflow: hidden;
+      top: 72px;
+      width: 100%;
+      background: rgba(255,255,255,0.95);
+      margin: 0;
+      padding: 0;
+      @include transition(height 500ms, padding 500ms);
+
+      &.is-open {
+        height: 250px;
+        padding: 20px;
+      }
+
+    }
+
+  }
+
+  .hamburger {
+    display: none;
+    padding: 10px;
+    float: right;
+    cursor: pointer;
+
+    @include media($tab_port) {
+      display: block;
+    }
+
+    .line-wrapper {
+      transition: transform 300ms;
+
+      .line1,
+      .line2,
+      .line3 {
+        width: 30px;
+        height: 2px;
+        margin: 0 0 5px 0;
+        display: block;
+        border-bottom: 1px solid $darkestGray;
+        border-radius: 4px;
+        transition: transform 300ms;
+      }
+
+    }
+
+    &.is-open {
+      .line-wrapper {
+        @include transform(rotate(45deg) translateY(3px));
+      }
+
+      .line2 {
+        @include transform(translateY(-7px) rotate(90deg));
+      }
+
+      .line3 {
+        @include transform(translateY(-13.5px) rotate(90deg));
+      }
+
+    }
+
   }
 
 }
