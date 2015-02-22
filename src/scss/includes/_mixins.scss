@@ -1,13 +1,17 @@
-@mixin navbar-text {
+@mixin opensans-light {
   font-family: "Open Sans", sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
   font-weight: 300;
 }
 
-@mixin h1-font {
-  font-family: "Open Sans", sans-serif;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-weight: 200;
+@mixin lato-normal {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+@mixin sourcecodepro-normal {
+  font-family: 'Source Code Pro', serif;
+  font-weight: 400;
 }

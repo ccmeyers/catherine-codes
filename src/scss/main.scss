@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:800,600,400,300|Open+Sans+Condensed:300,700|Lato:100,300,400);
+@import url(http://fonts.googleapis.com/css?family=Lato|Source+Code+Pro|Open+Sans:300);
 
 @import "bourbon";
 @import "neat";
@@ -16,12 +16,21 @@ body {
   -webkit-font-smoothing: antialiased;
   color: $darkestGray;
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: normal;
+  }
+
   .container {
     @include outer-container(100%);
   }
 
   .container-inner {
-    @include outer-container(80%);
+    @include outer-container(75%);
   }
 
   .row {
@@ -30,6 +39,7 @@ body {
 
   @include keyframes(swap) {
     0%   { background-image: url('../images/treble-clef.png') }
+    50%  { background-image: none }
     100% { background-image: url('../images/tags.png') }
   }
 

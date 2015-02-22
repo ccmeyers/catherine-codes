@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:800,600,400,300|Open+Sans+Condensed:300,700|Lato:100,300,400);
+@import url(http://fonts.googleapis.com/css?family=Lato|Source+Code+Pro|Open+Sans:300);
 /* Neat 1.7.0
  * http://neat.bourbon.io
  * Copyright 2012-2014 thoughtbot, inc.
@@ -462,10 +462,9 @@ td, th {
     display: inline-block;
     vertical-align: middle;
     margin: 0;
-    font-family: "Open Sans", sans-serif;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-weight: 200;
+    font-family: 'Source Code Pro', serif;
+    font-weight: 400;
+    text-transform: lowercase;
     font-size: 40px;
     margin: 0 10px; }
     .hero .header h1 span {
@@ -484,105 +483,137 @@ td, th {
     font-family: "Open Sans", sans-serif;
     letter-spacing: 1px;
     text-transform: uppercase;
-    font-weight: 200;
+    font-weight: 300;
     font-size: 36px; }
   .portfolio h2 {
     text-align: center;
-    margin: 40px 0 20px;
+    margin: 30px 0;
     font-family: "Open Sans", sans-serif;
     letter-spacing: 1px;
     text-transform: uppercase;
-    font-weight: 200;
+    font-weight: 300;
     font-size: 26px; }
-  .portfolio .front-end .detail {
+  .portfolio .front-end a {
     position: relative;
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 23.23176%;
-    background: rgba(255, 255, 255, 0.9) url('../images/valet-anywhere-logo.png') no-repeat center center;
-    background-size: contain;
-    height: 250px;
-    overflow: hidden; }
-    .portfolio .front-end .detail:last-child {
+    overflow: hidden;
+    text-decoration: none; }
+    .portfolio .front-end a:last-child {
       margin-right: 0; }
-    .portfolio .front-end .detail.shapeup {
-      background-image: url('../images/shapeup-logo.png'); }
-    .portfolio .front-end .detail.smith {
-      background-image: url('../images/smith-logo-blue.png'); }
-    .portfolio .front-end .detail.hippodrome {
-      background-image: url('../images/hippodrome-logo-blue.png'); }
-    .portfolio .front-end .detail:hover .overlay {
-      top: 0;
-      -webkit-transition: all 0.6s ease-in;
-      -moz-transition: all 0.6s ease-in;
-      transition: all 0.6s ease-in;
-      -webkit-transform: translateX(-15%) translateY(-16%) rotate(45deg);
-      -moz-transform: translateX(-15%) translateY(-16%) rotate(45deg);
-      -ms-transform: translateX(-15%) translateY(-16%) rotate(45deg);
-      -o-transform: translateX(-15%) translateY(-16%) rotate(45deg);
-      transform: translateX(-15%) translateY(-16%) rotate(45deg); }
-    .portfolio .front-end .detail .overlay {
-      position: absolute;
-      top: -250px;
-      background-color: rgba(0, 0, 0, 0.9);
-      height: 145%;
-      width: 146%;
-      -webkit-transform: translateX(-85%) translateY(-15%) rotate(45deg);
-      -moz-transform: translateX(-85%) translateY(-15%) rotate(45deg);
-      -ms-transform: translateX(-85%) translateY(-15%) rotate(45deg);
-      -o-transform: translateX(-85%) translateY(-15%) rotate(45deg);
-      transform: translateX(-85%) translateY(-15%) rotate(45deg); }
-      .portfolio .front-end .detail .overlay img {
-        -webkit-transform: rotate(-45deg);
-        -moz-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-        -o-transform: rotate(-45deg);
-        transform: rotate(-45deg);
-        margin-top: 35%;
-        margin-left: 12%; }
-  .portfolio .back-end .detail {
+    .portfolio .front-end a .detail {
+      background: rgba(255, 255, 255, 0.9) url('../images/valet-anywhere-logo.png') no-repeat center center;
+      background-size: contain;
+      height: 250px; }
+      .portfolio .front-end a .detail.shapeup {
+        background-image: url('../images/shapeup-logo.png'); }
+      .portfolio .front-end a .detail.smith {
+        background-image: url('../images/smith-logo-blue.png'); }
+      .portfolio .front-end a .detail.hippodrome {
+        background-image: url('../images/hippodrome-logo-blue.png'); }
+      .portfolio .front-end a .detail-text {
+        opacity: 0;
+        position: relative;
+        text-align: center;
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        line-height: 1.4;
+        z-index: 3;
+        padding: 25px; }
+        .portfolio .front-end a .detail-text img {
+          max-width: 100%; }
+        .portfolio .front-end a .detail-text h5 {
+          margin: 12px 0 5px;
+          color: white;
+          text-transform: uppercase;
+          font-size: 14px; }
+        .portfolio .front-end a .detail-text p {
+          font-size: 18px;
+          margin: 0;
+          color: white; }
+      .portfolio .front-end a .detail:hover .detail-text {
+        opacity: 1;
+        -webkit-transition: opacity 0.5s ease-in 0.6s;
+        -moz-transition: opacity 0.5s ease-in 0.6s;
+        transition: opacity 0.5s ease-in 0.6s; }
+      .portfolio .front-end a .detail:hover .overlay {
+        top: 0;
+        -webkit-transition: all 0.6s ease-in;
+        -moz-transition: all 0.6s ease-in;
+        transition: all 0.6s ease-in;
+        -webkit-transform: translateX(-15%) translateY(-16%) rotate(45deg);
+        -moz-transform: translateX(-15%) translateY(-16%) rotate(45deg);
+        -ms-transform: translateX(-15%) translateY(-16%) rotate(45deg);
+        -o-transform: translateX(-15%) translateY(-16%) rotate(45deg);
+        transform: translateX(-15%) translateY(-16%) rotate(45deg); }
+      .portfolio .front-end a .detail .overlay {
+        position: absolute;
+        top: -250px;
+        background-color: rgba(0, 0, 0, 0.9);
+        height: 145%;
+        width: 146%;
+        -webkit-transform: translateX(-85%) translateY(-15%) rotate(45deg);
+        -moz-transform: translateX(-85%) translateY(-15%) rotate(45deg);
+        -ms-transform: translateX(-85%) translateY(-15%) rotate(45deg);
+        -o-transform: translateX(-85%) translateY(-15%) rotate(45deg);
+        transform: translateX(-85%) translateY(-15%) rotate(45deg);
+        z-index: 2; }
+  .portfolio .back-end a {
     position: relative;
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 23.23176%;
-    background-color: white;
-    height: 250px;
-    overflow: hidden; }
-    .portfolio .back-end .detail:last-child {
+    overflow: hidden;
+    text-decoration: none; }
+    .portfolio .back-end a:last-child {
       margin-right: 0; }
-    .portfolio .back-end .detail:first-child {
+    .portfolio .back-end a:first-child {
       margin-left: 12.79471%; }
-    .portfolio .back-end .detail:hover .overlay {
-      top: 0;
-      -webkit-transition: all 0.6s ease-in;
-      -moz-transition: all 0.6s ease-in;
-      transition: all 0.6s ease-in;
-      -webkit-transform: translateX(-15%) translateY(-16%) rotate(45deg);
-      -moz-transform: translateX(-15%) translateY(-16%) rotate(45deg);
-      -ms-transform: translateX(-15%) translateY(-16%) rotate(45deg);
-      -o-transform: translateX(-15%) translateY(-16%) rotate(45deg);
-      transform: translateX(-15%) translateY(-16%) rotate(45deg); }
-    .portfolio .back-end .detail .overlay {
-      position: absolute;
-      top: -250px;
-      background-color: rgba(0, 0, 0, 0.9);
-      height: 145%;
-      width: 146%;
-      -webkit-transform: translateX(-85%) translateY(-15%) rotate(45deg);
-      -moz-transform: translateX(-85%) translateY(-15%) rotate(45deg);
-      -ms-transform: translateX(-85%) translateY(-15%) rotate(45deg);
-      -o-transform: translateX(-85%) translateY(-15%) rotate(45deg);
-      transform: translateX(-85%) translateY(-15%) rotate(45deg); }
-      .portfolio .back-end .detail .overlay img {
-        -webkit-transform: rotate(-45deg);
-        -moz-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-        -o-transform: rotate(-45deg);
-        transform: rotate(-45deg);
-        margin-top: 35%;
-        margin-left: 12%; }
+    .portfolio .back-end a .detail {
+      background-color: white;
+      height: 250px; }
+      .portfolio .back-end a .detail-text {
+        opacity: 0;
+        position: relative;
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        line-height: 1.4;
+        z-index: 3;
+        padding: 25px;
+        color: white; }
+        .portfolio .back-end a .detail-text h4 {
+          text-align: center;
+          margin: 0; }
+      .portfolio .back-end a .detail:hover .detail-text {
+        opacity: 1;
+        -webkit-transition: opacity 0.5s ease-in 0.6s;
+        -moz-transition: opacity 0.5s ease-in 0.6s;
+        transition: opacity 0.5s ease-in 0.6s; }
+      .portfolio .back-end a .detail:hover .overlay {
+        top: 0;
+        -webkit-transition: all 0.6s ease-in;
+        -moz-transition: all 0.6s ease-in;
+        transition: all 0.6s ease-in;
+        -webkit-transform: translateX(-15%) translateY(-16%) rotate(45deg);
+        -moz-transform: translateX(-15%) translateY(-16%) rotate(45deg);
+        -ms-transform: translateX(-15%) translateY(-16%) rotate(45deg);
+        -o-transform: translateX(-15%) translateY(-16%) rotate(45deg);
+        transform: translateX(-15%) translateY(-16%) rotate(45deg); }
+      .portfolio .back-end a .detail .overlay {
+        position: absolute;
+        top: -250px;
+        background-color: rgba(0, 0, 0, 0.9);
+        height: 145%;
+        width: 146%;
+        -webkit-transform: translateX(-85%) translateY(-15%) rotate(45deg);
+        -moz-transform: translateX(-85%) translateY(-15%) rotate(45deg);
+        -ms-transform: translateX(-85%) translateY(-15%) rotate(45deg);
+        -o-transform: translateX(-85%) translateY(-15%) rotate(45deg);
+        transform: translateX(-85%) translateY(-15%) rotate(45deg);
+        z-index: 2; }
 
 .about {
   background-color: #666666;
@@ -599,24 +630,22 @@ td, th {
       font-family: "Open Sans", sans-serif;
       letter-spacing: 1px;
       text-transform: uppercase;
-      font-weight: 200; }
+      font-weight: 300; }
     .about .container-inner .text {
       float: left;
       display: block;
       margin-right: 2.35765%;
       width: 74.41059%;
       font-family: "Lato", sans-serif;
+      font-weight: 400;
       line-height: 1.4; }
       .about .container-inner .text:last-child {
         margin-right: 0; }
-      .about .container-inner .text a {
-        color: #9A0000;
-        text-decoration: none; }
-      .about .container-inner .text .social {
-        margin-top: 30px; }
-        .about .container-inner .text .social img {
-          width: 40px;
-          margin-right: 10px; }
+      .about .container-inner .text p {
+        margin: 15px 0; }
+        .about .container-inner .text p a {
+          color: #9A0000;
+          text-decoration: none; }
     .about .container-inner .pic {
       float: left;
       display: block;
@@ -625,7 +654,39 @@ td, th {
       .about .container-inner .pic:last-child {
         margin-right: 0; }
       .about .container-inner .pic img {
-        max-width: 100%; }
+        max-width: 100%;
+        margin-top: 15px; }
+    .about .container-inner .links {
+      margin-top: 15px; }
+      .about .container-inner .links .social {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 74.41059%; }
+        .about .container-inner .links .social:last-child {
+          margin-right: 0; }
+        .about .container-inner .links .social img {
+          width: 40px;
+          margin-right: 10px; }
+      .about .container-inner .links .resume {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 23.23176%;
+        text-align: right; }
+        .about .container-inner .links .resume:last-child {
+          margin-right: 0; }
+        .about .container-inner .links .resume a {
+          color: white;
+          background-color: rgba(154, 0, 0, 0.7);
+          font-size: 20px;
+          font-family: "Lato", sans-serif;
+          font-weight: 400;
+          line-height: 1.4;
+          padding: 20px 25px;
+          text-decoration: none; }
+          .about .container-inner .links .resume a:hover {
+            background-color: #9a0000; }
 
 body {
   -webkit-font-smoothing: antialiased;
@@ -634,12 +695,18 @@ body {
     0% {
       background-image: url('../images/treble-clef.png'); }
 
+    50% {
+      background-image: none; }
+
     100% {
       background-image: url('../images/tags.png'); } }
 
   @-moz-keyframes swap {
     0% {
       background-image: url('../images/treble-clef.png'); }
+
+    50% {
+      background-image: none; }
 
     100% {
       background-image: url('../images/tags.png'); } }
@@ -648,9 +715,14 @@ body {
     0% {
       background-image: url('../images/treble-clef.png'); }
 
+    50% {
+      background-image: none; }
+
     100% {
       background-image: url('../images/tags.png'); } }
  }
+  body h1, body h2, body h3, body h4, body h5, body h6 {
+    font-weight: normal; }
   body .container {
     max-width: 100%;
     margin-left: auto;
@@ -660,7 +732,7 @@ body {
       display: table;
       clear: both; }
   body .container-inner {
-    max-width: 80%;
+    max-width: 75%;
     margin-left: auto;
     margin-right: auto; }
     body .container-inner:after {
