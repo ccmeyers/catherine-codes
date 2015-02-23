@@ -362,12 +362,20 @@ td, th {
   .navigation .logo {
     float: left;
     font-size: 30px; }
+    @media screen and (max-width: 480px)  {
+      .navigation .logo {
+        font-size: 24px;
+        line-height: 37px; } }
   .navigation .nav-items {
     float: right;
     margin: 7px 0; }
     .navigation .nav-items a {
       margin-left: 25px;
       font-size: 20px; }
+      @media screen and (max-width: 768px)  {
+        .navigation .nav-items a {
+          display: block;
+          line-height: 1.4; } }
     @media screen and (max-width: 768px)  {
       .navigation .nav-items {
         position: absolute;
@@ -383,7 +391,7 @@ td, th {
         -moz-transition: height 500ms, padding 500ms;
         transition: height 500ms, padding 500ms; }
         .navigation .nav-items.is-open {
-          height: 250px;
+          height: 145px;
           padding: 20px; } }
   .navigation .hamburger {
     display: none;
@@ -426,36 +434,25 @@ td, th {
   text-align: center; }
   .hero .header-before {
     display: inline-block;
-    height: 70px;
-    width: 70px;
+    height: 60px;
+    width: 60px;
     background: url('../images/treble-clef.png') no-repeat center center;
     background: url('../images/treble-clef.svg') no-repeat center center;
     background-size: contain;
     vertical-align: middle; }
     .hero .header-before.swapper {
-      height: 60px;
-      width: 60px;
       background-image: url('../images/tag-open.png');
-      background-size: contain;
-      -webkit-transition: all 1s ease-in 2s;
-      -moz-transition: all 1s ease-in 2s;
-      transition: all 1s ease-in 2s; }
+      background-size: contain; }
   .hero .header-after {
     display: inline-block;
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
     background: url('../images/eighth-note-single.png') no-repeat center center;
-    background: url('../images/eighth-note-single.svg') no-repeat center center;
     background-size: contain;
     vertical-align: middle; }
     .hero .header-after.swapper {
-      height: 60px;
-      width: 60px;
       background-image: url('../images/tag-close.png');
-      background-size: contain;
-      -webkit-transition: all 1s ease-in 2s;
-      -moz-transition: all 1s ease-in 2s;
-      transition: all 1s ease-in 2s; }
+      background-size: contain; }
   .hero .header #html-tags {
     width: 60px; }
   .hero .header h1 {
@@ -466,6 +463,7 @@ td, th {
     font-weight: 400;
     text-transform: lowercase;
     font-size: 40px;
+    line-height: 60px;
     margin: 0 10px; }
     .hero .header h1 span {
       color: #9A0000; }
@@ -508,11 +506,14 @@ td, th {
       background-size: contain;
       height: 250px; }
       .portfolio .front-end a .detail.shapeup {
-        background-image: url('../images/shapeup-logo.png'); }
+        background: #232145 url('../images/shapeup-logo.png') no-repeat center center;
+        background-size: contain; }
       .portfolio .front-end a .detail.smith {
-        background-image: url('../images/smith-logo-blue.png'); }
+        background: #44a3e7 url('../images/smith-logo-white.png') no-repeat center center;
+        background-size: contain; }
       .portfolio .front-end a .detail.hippodrome {
-        background-image: url('../images/hippodrome-logo-blue.png'); }
+        background: #001964 url('../images/hippodrome-logo-white.png') no-repeat center center;
+        background-size: contain; }
       .portfolio .front-end a .detail-text {
         opacity: 0;
         position: relative;
@@ -526,13 +527,13 @@ td, th {
           max-width: 100%; }
         .portfolio .front-end a .detail-text h5 {
           margin: 12px 0 5px;
-          color: white;
+          color: #9A0000;
           text-transform: uppercase;
-          font-size: 14px; }
+          font-size: 16px; }
         .portfolio .front-end a .detail-text p {
           font-size: 18px;
           margin: 0;
-          color: white; }
+          color: #222222; }
       .portfolio .front-end a .detail:hover .detail-text {
         opacity: 1;
         -webkit-transition: opacity 0.5s ease-in 0.6s;
@@ -551,7 +552,7 @@ td, th {
       .portfolio .front-end a .detail .overlay {
         position: absolute;
         top: -250px;
-        background-color: rgba(0, 0, 0, 0.9);
+        background-color: rgba(255, 255, 255, 0.9);
         height: 145%;
         width: 146%;
         -webkit-transform: translateX(-85%) translateY(-15%) rotate(45deg);
@@ -572,9 +573,22 @@ td, th {
       margin-right: 0; }
     .portfolio .back-end a:first-child {
       margin-left: 12.79471%; }
+      @media screen and (max-width: 1050px) {
+        .portfolio .back-end a:first-child .detail-text {
+          padding: 5%; } }
     .portfolio .back-end a .detail {
-      background-color: white;
-      height: 250px; }
+      background: url('../images/ensemblify-logo.png') no-repeat center center;
+      background-size: contain;
+      height: 250px;
+      opacity: 0.9; }
+      .portfolio .back-end a .detail.best-stop {
+        background: url('../images/best-stop-logo.png') no-repeat center center;
+        background-size: contain; }
+        .portfolio .back-end a .detail.best-stop .detail-text {
+          padding: 30px 25px; }
+      .portfolio .back-end a .detail.petite-performer {
+        background: url('../images/petite-performer-logo.png') no-repeat center center;
+        background-size: contain; }
       .portfolio .back-end a .detail-text {
         opacity: 0;
         position: relative;
@@ -582,10 +596,20 @@ td, th {
         font-weight: 400;
         line-height: 1.4;
         z-index: 3;
-        padding: 25px;
-        color: white; }
+        padding: 10% 5%;
+        text-align: center; }
         .portfolio .back-end a .detail-text h4 {
-          text-align: center;
+          color: #222222;
+          margin: 0;
+          font-size: 16px; }
+        .portfolio .back-end a .detail-text h5 {
+          margin: 7px 0 5px;
+          color: #9A0000;
+          text-transform: uppercase;
+          font-size: 15px; }
+        .portfolio .back-end a .detail-text p {
+          color: #222222;
+          font-size: 14px;
           margin: 0; }
       .portfolio .back-end a .detail:hover .detail-text {
         opacity: 1;
@@ -605,7 +629,7 @@ td, th {
       .portfolio .back-end a .detail .overlay {
         position: absolute;
         top: -250px;
-        background-color: rgba(0, 0, 0, 0.9);
+        background-color: rgba(255, 255, 255, 0.9);
         height: 145%;
         width: 146%;
         -webkit-transform: translateX(-85%) translateY(-15%) rotate(45deg);
@@ -690,37 +714,7 @@ td, th {
 
 body {
   -webkit-font-smoothing: antialiased;
-  color: #222222;
-  @-webkit-keyframes swap {
-    0% {
-      background-image: url('../images/treble-clef.png'); }
-
-    50% {
-      background-image: none; }
-
-    100% {
-      background-image: url('../images/tags.png'); } }
-
-  @-moz-keyframes swap {
-    0% {
-      background-image: url('../images/treble-clef.png'); }
-
-    50% {
-      background-image: none; }
-
-    100% {
-      background-image: url('../images/tags.png'); } }
-
-  @keyframes swap {
-    0% {
-      background-image: url('../images/treble-clef.png'); }
-
-    50% {
-      background-image: none; }
-
-    100% {
-      background-image: url('../images/tags.png'); } }
- }
+  color: #222222; }
   body h1, body h2, body h3, body h4, body h5, body h6 {
     font-weight: normal; }
   body .container {
@@ -732,13 +726,22 @@ body {
       display: table;
       clear: both; }
   body .container-inner {
-    max-width: 75%;
+    max-width: 80%;
     margin-left: auto;
     margin-right: auto; }
     body .container-inner:after {
       content: "";
       display: table;
       clear: both; }
+    @media screen and (max-width: 1150px) {
+      body .container-inner {
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto; }
+        body .container-inner:after {
+          content: "";
+          display: table;
+          clear: both; } }
   body .row {
     display: block; }
     body .row:after {

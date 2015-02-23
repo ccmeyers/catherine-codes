@@ -30,17 +30,15 @@ body {
   }
 
   .container-inner {
-    @include outer-container(75%);
+    @include outer-container(80%);
+
+    @media screen and (max-width: 1150px) {
+      @include outer-container(90%);
+    }
   }
 
   .row {
     @include row();
-  }
-
-  @include keyframes(swap) {
-    0%   { background-image: url('../images/treble-clef.png') }
-    50%  { background-image: none }
-    100% { background-image: url('../images/tags.png') }
   }
 
 }

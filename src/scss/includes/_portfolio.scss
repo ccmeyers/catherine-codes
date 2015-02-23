@@ -36,15 +36,18 @@
         height: 250px;
 
         &.shapeup {
-          background-image: url('../images/shapeup-logo.png');
+          background: #232145 url('../images/shapeup-logo.png') no-repeat center center;
+          background-size: contain;
         }
 
         &.smith {
-          background-image: url('../images/smith-logo-blue.png');
+          background: #44a3e7 url('../images/smith-logo-white.png') no-repeat center center;
+          background-size: contain;
         }
 
         &.hippodrome {
-          background-image: url('../images/hippodrome-logo-blue.png');
+          background: #001964 url('../images/hippodrome-logo-white.png') no-repeat center center;
+          background-size: contain;
         }
 
         &-text {
@@ -61,15 +64,15 @@
 
           h5 {
             margin: 12px 0 5px;
-            color: white;
+            color: $wine;
             text-transform: uppercase;
-            font-size: 14px;
+            font-size: 16px;
           }
 
           p {
             font-size: 18px;
             margin: 0;
-            color: white;
+            color: $darkestGray;
           }
 
         }
@@ -92,7 +95,7 @@
         .overlay {
           position: absolute;
           top: -250px;
-          background-color: rgba(0,0,0,0.9);
+          background-color: rgba(255,255,255,0.9);
           height: 145%;
           width: 146%;
           @include transform(translateX(-85%) translateY(-15%) rotate(45deg));
@@ -116,28 +119,64 @@
 
       &:first-child {
         @include shift(1.5);
+
+        .detail-text {
+
+          @media screen and (max-width: 1050px) {
+            padding: 5%;
+          }
+
+        }
+
       }
 
 
       .detail {
-        background-color: white;
+        background: url('../images/ensemblify-logo.png') no-repeat center center;
+        background-size: contain;
         height: 250px;
+        opacity: 0.9;
+
+        &.best-stop {
+          background: url('../images/best-stop-logo.png') no-repeat center center;
+          background-size: contain;
+
+          .detail-text {
+            padding: 30px 25px;
+          }
+
+        }
+
+        &.petite-performer {
+          background: url('../images/petite-performer-logo.png') no-repeat center center;
+          background-size: contain;
+        }
 
         &-text {
           opacity: 0;
           position: relative;
           @include lato-normal;
           z-index: 3;
-          padding: 25px;
-          color: white;
+          padding: 10% 5%;
+          text-align: center;
 
           h4 {
-            text-align: center;
+            color: $darkestGray;
             margin: 0;
+            font-size: 16px;
+          }
+
+          h5 {
+            margin: 7px 0 5px;
+            color: $wine;
+            text-transform: uppercase;
+            font-size: 15px;
           }
           
           p {
-            
+            color: $darkestGray;
+            font-size: 14px;
+            margin: 0;
           }
 
         }
@@ -160,7 +199,7 @@
         .overlay {
           position: absolute;
           top: -250px;
-          background-color: rgba(0,0,0,0.9);
+          background-color: rgba(255,255,255,0.9);
           height: 145%;
           width: 146%;
           @include transform(translateX(-85%) translateY(-15%) rotate(45deg));

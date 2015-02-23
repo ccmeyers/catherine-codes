@@ -28,6 +28,12 @@
   .logo {
     float: left;
     font-size: 30px;
+
+    @include media($mobile) {
+      font-size: 24px;
+      line-height: 37px;
+    }
+
   }
 
   .nav-items {
@@ -37,6 +43,12 @@
     a {
       margin-left: 25px;
       font-size: 20px;
+
+      @include media($tab_port) {
+        display: block;
+        line-height: 1.4;
+      }
+      
     }
 
     @include media($tab_port) {
@@ -52,7 +64,7 @@
       @include transition(height 500ms, padding 500ms);
 
       &.is-open {
-        height: 250px;
+        height: 145px;
         padding: 20px;
       }
 

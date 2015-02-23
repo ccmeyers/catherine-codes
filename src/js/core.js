@@ -35,8 +35,12 @@ var app = {
   },
 
   displayHeader: function() {
-    app.beforeHeader.addClass('swapper');
-    app.afterHeader.addClass('swapper');
+    app.beforeHeader.delay(2000).fadeOut(1000);
+    app.afterHeader.delay(2000).fadeOut(1000);
+    setTimeout(function(){ 
+      app.beforeHeader.addClass('swapper').fadeIn(2000);
+      app.afterHeader.addClass('swapper').fadeIn(2000);
+    }, 3000);
   },
 
   heroHeightSetter: function() {
