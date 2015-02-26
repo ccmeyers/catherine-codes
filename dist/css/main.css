@@ -666,7 +666,7 @@ td, th {
       .about .container-inner .text:last-child {
         margin-right: 0; }
       .about .container-inner .text p {
-        margin: 15px 0; }
+        margin: 15px 0 15px 15px; }
         .about .container-inner .text p a {
           color: #9A0000;
           text-decoration: none; }
@@ -726,13 +726,40 @@ body {
       display: table;
       clear: both; }
   body .container-inner {
-    max-width: 80%;
+    max-width: 50%;
     margin-left: auto;
     margin-right: auto; }
     body .container-inner:after {
       content: "";
       display: table;
       clear: both; }
+    @media screen and (max-width: 2000px) {
+      body .container-inner {
+        max-width: 60%;
+        margin-left: auto;
+        margin-right: auto; }
+        body .container-inner:after {
+          content: "";
+          display: table;
+          clear: both; } }
+    @media screen and (max-width: 1600px) {
+      body .container-inner {
+        max-width: 70%;
+        margin-left: auto;
+        margin-right: auto; }
+        body .container-inner:after {
+          content: "";
+          display: table;
+          clear: both; } }
+    @media screen and (max-width: 1400px) {
+      body .container-inner {
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto; }
+        body .container-inner:after {
+          content: "";
+          display: table;
+          clear: both; } }
     @media screen and (max-width: 1150px) {
       body .container-inner {
         max-width: 90%;

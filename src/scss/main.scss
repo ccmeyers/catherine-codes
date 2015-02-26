@@ -30,7 +30,19 @@ body {
   }
 
   .container-inner {
-    @include outer-container(80%);
+    @include outer-container(50%);
+
+    @media screen and (max-width: 2000px) {
+      @include outer-container(60%);
+    }
+
+    @media screen and (max-width: 1600px) {
+      @include outer-container(70%);
+    }
+
+    @media screen and (max-width: 1400px) {
+      @include outer-container(80%);
+    }
 
     @media screen and (max-width: 1150px) {
       @include outer-container(90%);
