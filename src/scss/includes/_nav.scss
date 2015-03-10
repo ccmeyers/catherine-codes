@@ -3,46 +3,31 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(255,255,255,0.9);
-  border-bottom: 1px solid lightgray;
-  padding: 15px 3.75%;
+  background: rgba(237,243,253,0.9);
+  padding: 25px 8.5%;
   z-index: 100;
-  text-transform: uppercase;
-
-  a {
-    text-decoration: none;
-    color: $darkestGray;
-    @include opensans-light;
-
-    &:hover {
-      color: $wine;
-      @include transition(color 0.2s ease-in-out);
-    }
-
-    &.active {
-      color: $wine;
-    }
-
-  }
-
-  .logo {
-    float: left;
-    font-size: 30px;
-
-    @include media($mobile) {
-      font-size: 24px;
-      line-height: 37px;
-    }
-
-  }
 
   .nav-items {
     float: right;
     margin: 7px 0;
 
     a {
-      margin-left: 25px;
-      font-size: 20px;
+      margin-left: 65px;
+      @include sourcecodepro-bold;
+      font-size: 14px;
+      letter-spacing: 1px;
+      color: $textGray;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      &:hover {
+        color: $red;
+        @include transition(color 0.2s ease-in-out);
+      }
+
+      &.active {
+        color: $red;
+      }
 
       @include media($tab_port) {
         display: block;

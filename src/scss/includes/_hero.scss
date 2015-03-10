@@ -1,14 +1,52 @@
 .hero {
   text-align: center;
+  background-color: $lightGray;
 
   .header {
 
+    &-logo {
+      margin-bottom: 17px;
+      margin-left: -305px;
+      position: relative;
+      z-index: 200;
+
+      a {
+        text-decoration: none;
+        @include opensans-light;
+        color: $red;
+        font-size: 30px;
+
+        &:hover {
+          color: $textGray;
+          @include transition(color 0.2s ease-in-out);
+        }
+
+        &.active {
+          color: $textGray;
+        }
+        
+      }
+
+      &.fix-to-nav {
+        position: fixed;
+        margin-bottom: 0;
+        top: 20px;
+        left: 50%;
+      }
+
+      &.move-left {
+        left: 8.5%;
+        margin-left: 0;
+        @include transition(all 0.5s ease-in);
+      }
+
+    }
+
     &-before {
       display: inline-block;
-      height: 60px;
-      width: 60px;
-      background: url('../images/treble-clef.png') no-repeat center center;
-      background: url('../images/treble-clef.svg') no-repeat center center;
+      height: 35px;
+      width: 35px;
+      background: url('../images/double.png') no-repeat center center;
       background-size: contain;
       vertical-align: middle;
 
@@ -22,23 +60,17 @@
 
     &-after {
       display: inline-block;
-      height: 60px;
-      width: 60px;
-      background: url('../images/eighth-note-single.png') no-repeat center center;
-      // background: url('../images/eighth-note-single.svg') no-repeat center center;
+      height: 35px;
+      width: 35px;
+      background: url('../images/double.png') no-repeat center center;
       background-size: contain;
       vertical-align: middle;
       
       &.swapper {
         background-image: url('../images/tag-close.png');
         background-size: contain;
-        // @include transition(all 1s ease-in 2s);
       }
 
-    }
-
-    #html-tags {
-      width: 60px;
     }
 
     h1 {
@@ -47,12 +79,12 @@
       margin: 0;
       @include sourcecodepro-normal;
       text-transform: lowercase;
-      font-size: 40px;
-      line-height: 60px;
+      font-size: 30px;
+      line-height: 35px;
       margin: 0 10px;
 
       span {
-        color: $wine;
+        color: $red;
       }
 
     }

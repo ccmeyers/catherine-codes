@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Lato|Source+Code+Pro|Open+Sans:300);
+@import url(http://fonts.googleapis.com/css?family=Lato|Source+Code+Pro:400,700|Open+Sans:300,600);
 
 @import "bourbon";
 @import "neat";
@@ -11,6 +11,7 @@
 @import "includes/hero";
 @import "includes/portfolio";
 @import "includes/about";
+@import "includes/modal";
 
 body {
   -webkit-font-smoothing: antialiased;

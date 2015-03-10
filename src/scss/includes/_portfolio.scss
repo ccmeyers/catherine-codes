@@ -1,7 +1,7 @@
 .portfolio {
 
-  background-color: $lightblue;
-  color: white;
+  background-color: #fff;
+  color: $red;
   padding: 100px 0;
 
   @include media($desktop) {
@@ -9,31 +9,48 @@
   }
 
   h1 {
-    text-align: center;
-    margin: 0;
+    width: 31%;
+    margin: 0 0 50px 0;
     @include opensans-light;
-    font-size: 36px;
+    font-size: 25px;
+    line-height: 55px;
+    padding-left: 14%;
+    border-top: 1px solid $red;
+    border-right: 1px solid $red;
+    border-bottom: 1px solid $red;
   }
 
   h2 {
+    @include opensans-semibold;
+    font-size: 18px;
+    color: #636363;
+    // @include transform(rotate(270deg));
     text-align: center;
-    margin: 30px 0;
-    @include opensans-light;
-    font-size: 26px;
+    float: left;
+    // width: 150px;
+    // margin: 0 -20px 0 45px;
   }
 
   .front-end {
+    margin-bottom: 50px;
 
-    a {
-      position: relative;
-      @include span-columns(3);
-      overflow: hidden;
-      text-decoration: none;
+    .boxes {
+      @include span-columns(10, 'block-collapse');
+      background-color: $medGray;
+      padding: 20px;
+
+      .h2-wrapper {
+        @include span-columns(1 of 10)
+      }
 
       .detail {
+        position: relative;
+        @include span-columns(2.25 of 10);
+        overflow: hidden;
         background: rgba(255,255,255,0.9) url('../images/valet-anywhere-logo.png') no-repeat center center;
         background-size: contain;
         height: 250px;
+        cursor: pointer;
 
         &.shapeup {
           background: #232145 url('../images/shapeup-logo.png') no-repeat center center;
@@ -106,19 +123,31 @@
 
     }
 
+    .white-space {
+      @include span-columns(2, 'block-collapse');
+      background-color: #fff;
+    }
+
   }
 
 
   .back-end {
+    background-color: $medGray;
+    width: 71%;
+    margin-bottom: 50px;
+    padding: 20px 0;
 
-    a {
+    .detail {
       position: relative;
-      @include span-columns(3);
+      @include span-columns(3.2);
       overflow: hidden;
-      text-decoration: none;
+      background: url('../images/ensemblify-logo.png') no-repeat center center;
+      background-size: contain;
+      height: 250px;
+      opacity: 0.9;
+      cursor: pointer;
 
       &:first-child {
-        @include shift(1.5);
 
         .detail-text {
 
@@ -130,82 +159,73 @@
 
       }
 
-
-      .detail {
-        background: url('../images/ensemblify-logo.png') no-repeat center center;
+      &.best-stop {
+        background: url('../images/best-stop-logo.png') no-repeat center center;
         background-size: contain;
-        height: 250px;
-        opacity: 0.9;
 
-        &.best-stop {
-          background: url('../images/best-stop-logo.png') no-repeat center center;
-          background-size: contain;
-
-          .detail-text {
-            padding: 30px 25px;
-          }
-
+        .detail-text {
+          padding: 30px 25px;
         }
 
-        &.petite-performer {
-          background: url('../images/petite-performer-logo.png') no-repeat center center;
-          background-size: contain;
+      }
+
+      &.petite-performer {
+        background: url('../images/petite-performer-logo.png') no-repeat center center;
+        background-size: contain;
+      }
+
+      &-text {
+        opacity: 0;
+        position: relative;
+        @include lato-normal;
+        z-index: 3;
+        padding: 10% 5%;
+        text-align: center;
+
+        h4 {
+          color: $darkestGray;
+          margin: 0;
+          font-size: 16px;
         }
 
-        &-text {
-          opacity: 0;
-          position: relative;
-          @include lato-normal;
-          z-index: 3;
-          padding: 10% 5%;
-          text-align: center;
-
-          h4 {
-            color: $darkestGray;
-            margin: 0;
-            font-size: 16px;
-          }
-
-          h5 {
-            margin: 7px 0 5px;
-            color: $wine;
-            text-transform: uppercase;
-            font-size: 15px;
-          }
-          
-          p {
-            color: $darkestGray;
-            font-size: 14px;
-            margin: 0;
-          }
-
+        h5 {
+          margin: 7px 0 5px;
+          color: $wine;
+          text-transform: uppercase;
+          font-size: 15px;
+        }
+        
+        p {
+          color: $darkestGray;
+          font-size: 14px;
+          margin: 0;
         }
 
-        &:hover {
+      }
 
-          .detail-text {
-            opacity: 1;
-            @include transition(opacity 0.5s ease-in 0.6s);
-          }
+      &:hover {
 
-          .overlay {
-            top: 0;
-            @include transition(all 0.6s ease-in);
-            @include transform(translateX(-15%) translateY(-16%) rotate(45deg));
-          }
-
+        .detail-text {
+          opacity: 1;
+          @include transition(opacity 0.5s ease-in 0.6s);
         }
 
         .overlay {
-          position: absolute;
-          top: -250px;
-          background-color: rgba(255,255,255,0.9);
-          height: 145%;
-          width: 146%;
-          @include transform(translateX(-85%) translateY(-15%) rotate(45deg));
-          z-index: 2;
-
+          top: 0;
+          @include transition(all 0.6s ease-in);
+          @include transform(translateX(-15%) translateY(-16%) rotate(45deg));
         }
+
+      }
+
+      .overlay {
+        position: absolute;
+        top: -250px;
+        background-color: rgba(255,255,255,0.9);
+        height: 145%;
+        width: 146%;
+        @include transform(translateX(-85%) translateY(-15%) rotate(45deg));
+        z-index: 2;
 
       }
 

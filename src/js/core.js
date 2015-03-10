@@ -8,6 +8,7 @@ var app = {
   documentWindow: $(window),
   beforeHeader: $('.header-before'),
   afterHeader: $('.header-after'),
+  headerLogo: $('.header-logo'),
   detail: $('.detail'),
   homeLink: $('.home-link'),
   navItems: $('.nav-items', '.navigation'),
@@ -19,9 +20,13 @@ var app = {
   heroHeaderHeight: $('.header').height(),
   portfolio: $('.portfolio'),
   hamburger: $('.hamburger', '.navigation'),
+  modalOverlay: $('.modal-overlay'),
+  modal: $('.modal'),
+  portfolioBox: $('.detail'),
 
   init: function() {
     app.displayHeader();
+    app.fixHeader();
     app.heroHeightSetter();
     app.documentWindow.on('load', app.heroHeightSetter);
     app.documentWindow.on('resize', app.heroHeightSetter);
@@ -32,15 +37,36 @@ var app = {
     app.navJumper();
     app.navHighlighter();
     app.mobileNav();
+    app.modalPop();
   },
 
   displayHeader: function() {
-    app.beforeHeader.delay(2000).fadeOut(1000);
-    app.afterHeader.delay(2000).fadeOut(1000);
+    app.beforeHeader.delay(1500).fadeOut(1000);
+    app.afterHeader.delay(1500).fadeOut(1000);
     setTimeout(function(){ 
       app.beforeHeader.addClass('swapper').fadeIn(2000);
       app.afterHeader.addClass('swapper').fadeIn(2000);
     }, 3000);
+  },
+
+  fixHeader: function() {
+    app.documentWindow.on('scroll', function(){
+      var distance = app.headerLogo.offset().top,
+          scrollTop = $(this).scrollTop();
+      if (scrollTop >= (distance-21)) {
+        app.headerLogo.addClass('fix-to-nav');
+        $('.header').css('margin-top', '58px');
+        setTimeout(function(){
+          app.headerLogo.addClass('move-left');
+        }, 200);
+      }
+      // if (scrollTop < distance) {
+      //   app.headerLogo.addClass('move-right').removeClass('move-left');
+      // setTimeout(function(){
+      //   app.headerLogo.addClass('unfix').removeClass('fix-to-nav');
+      // }, 200);
+      // }
+    });
   },
 
   heroHeightSetter: function() {
@@ -50,8 +76,16 @@ var app = {
   },
 
   squarify: function() {
-    var feWidth = app.detail.width();
+    var feWidth = app.detail.width(),
+        feH2 = (feWidth + 40 -75)/2,
+        beH2 = feH2 + 24;
+    console.log(feWidth);
+    console.log(feH2);
+    console.log(beH2);
     app.detail.css('height', feWidth);
+    // $('.front-end h2').css('margin-top', feH2);
+    // $('.back-end h2').css('margin-top', beH2);
+    
   },
 
   navJumper: function() {
@@ -94,6 +128,23 @@ var app = {
       app.navItems.toggleClass('is-open');
     });
   },
+
+  modalPop: function() {
+    app.portfolioBox.on('click', function(){
+        app.modalOverlay.addClass('open');
+        app.modal.addClass('open');
+    });
+
+    app.modalOverlay.on('click', function(){
+        app.modalOverlay.addClass('close').removeClass('open');
+        app.modal.addClass('close').removeClass('open');
+        setTimeout(function(){
+            app.modalOverlay.removeClass('close');
+            app.modal.removeClass('close');
+        }, 450);
+    });
+
+  }
 
 }
 
