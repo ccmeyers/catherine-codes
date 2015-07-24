@@ -1,0 +1,152 @@
+.hero {
+  position: relative;
+  text-align: center;
+  background-color: $lightGray;
+  height: 100vh;
+
+  .header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translateX(-50%) translateY(-55%));
+
+    &-logo {
+      margin-bottom: 17px;
+      margin-left: -305px;
+      z-index: 200;
+
+      @include media($tab_port) {
+        margin-left: -274px;
+      }
+
+      @media screen and (max-width: 650px) {
+        margin-left: -143px;
+      }
+
+      @media screen and (max-width: 445px) {
+        margin-left: 0;
+      }
+
+      a {
+        text-decoration: none;
+        @include opensans-light;
+        color: $red;
+        font-size: 30px;
+
+        @include media($tab_port) {
+          font-size: 27px;
+        }
+
+        @media screen and (max-width: 445px) {
+          font-size: 24px;
+        }
+
+        &:hover {
+          color: $textGray;
+          @include transition(color 0.2s ease-in-out);
+        }
+
+        &.active {
+          color: $textGray;
+        }
+        
+      }
+
+    }
+
+    .subtag {
+      position: relative;
+
+      .subtag-before {
+        display: inline-block;
+        position: absolute;
+        left: -30px;
+        top: 2px;
+        height: 35px;
+        width: 35px;
+        background: url('../images/double.png') no-repeat center center;
+        background-size: contain;
+        vertical-align: middle;
+
+        @media screen and (max-width: 650px) {
+          top: 20px;
+        }
+
+        @media screen and (max-width: 445px) {
+          top: 12px;
+          height: 30px;
+          width: 30px;
+        }
+
+        &.swapper {
+          background-image: url('../images/tag-open.png');
+          background-size: contain;
+        }
+        
+      }
+
+      .subtag-after {
+        display: inline-block;
+        position: absolute;
+        right: -28px;
+        top: 2px;
+        height: 35px;
+        width: 35px;
+        background: url('../images/double.png') no-repeat center center;
+        background-size: contain;
+        vertical-align: middle;
+
+        @media screen and (max-width: 650px) {
+          top: 20px;
+        }
+
+        @media screen and (max-width: 445px) {
+          top: 12px;
+          height: 30px;
+          width: 30px;
+        }
+        
+        &.swapper {
+          background-image: url('../images/tag-close.png');
+          background-size: contain;
+        }
+
+      }
+
+      h1 {
+        display: inline-block;
+        width: 614px;
+        vertical-align: middle;
+        margin: 0;
+        @include sourcecodepro-normal;
+        text-transform: lowercase;
+        font-size: 30px;
+        line-height: 35px;
+        margin: 0 10px;
+
+        @include media($tab_port) {
+          width: 544px;
+          font-size: 27px;
+        }
+
+        @media screen and (max-width: 650px) {
+          width: 335px;
+        }
+
+        @media screen and (max-width: 445px) {
+          width: 228px;
+          font-size: 20px;
+          line-height: 25px;
+        }
+
+        span {
+          color: $red;
+        }
+
+      }
+
+    }
+    
+  }
+
+}

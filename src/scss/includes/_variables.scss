@@ -1,0 +1,17 @@
+//colors
+$red: #ff3b50;
+$lightGray: #edf3fd;
+$medGray: #f6f6f6;
+$textGray: #5c5c5c;
+$blue: #33466e;
+
+$wine: #9A0000;
+$darkestGray: #222222;
+$lightblue: #394F6B;
+$darkGray: #666666;
+//breakpoints
+$mobile: new-breakpoint(max-width 480px);
+$tab_port: new-breakpoint(max-width 768px);
+$tab_land: new-breakpoint(max-width 1024px);
+$desktop: new-breakpoint(max-width 1280px);
+$desktop_xl: new-breakpoint(max-width 1600px);

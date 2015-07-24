@@ -1,0 +1,133 @@
+.about {
+  background-color: #33466e;
+  padding: 100px 0;
+  @include lato-normal;
+
+  @include media($desktop) {
+    padding: 75px 0;
+  }
+
+  h1 {
+    float: right;
+    width: 31%;
+    margin: 0 0 50px 0;
+    @include opensans-light;
+    text-align: center;
+    font-size: 25px;
+    line-height: 55px;
+    padding-right: 14%;
+    color: $red;
+    border-top: 1px solid $red;
+    border-left: 1px solid $red;
+    border-bottom: 1px solid $red;
+
+    @media screen and (max-width: 1010px) {
+      width: 35%;
+    }
+
+    @include media($tab_port) {
+      width: 40%;
+    }
+
+    @media screen and (max-width: 675px) {
+      width: 45%;
+    }
+    
+    @media screen and (max-width: 530px) {
+      width: 55%;
+    }
+
+    @media screen and (max-width: 400px) {
+      width: 70%;
+    }
+  }
+
+  .container-inner {
+    background-color: rgba(255,255,255,0.9);
+    padding: 100px;
+
+    @include media($tab_port) {
+      padding: 50px 65px;
+    }
+
+    @include media($mobile) {
+      padding: 25px 40px;
+    }
+
+    .text {
+      @include span-columns(9);
+
+      @media screen and (max-width: 1023px) {
+        @include span-columns(8);
+      }
+
+      @media screen and (max-width: 950px) {
+        @include span-columns(12);
+      }
+
+      p {
+        margin: 15px 0 15px 15px;
+
+
+        @media screen and (max-width: 950px) {
+          margin-left: 0;
+        }
+
+        a {
+          color: $wine;
+          text-decoration: none;
+        }
+
+      }
+
+    }
+
+    .pic {
+      @include span-columns(3);
+
+      @media screen and (max-width: 1023px) {
+        @include span-columns(4);
+      }
+
+      @media screen and (max-width: 950px) {
+        @include span-columns(12);
+      }
+
+      img {
+        max-width: 100%;
+        margin-top: 15px;
+
+        @media screen and (max-width: 950px) {
+          display: none;
+        }
+      }
+
+    }
+
+    .links {
+      margin-top: 15px;
+
+      .social {
+        text-align: right;
+
+        @media screen and (max-width: 380px) {
+          text-align: center;
+        }
+
+        img {
+          width: 40px;
+          margin-right: 10px;
+
+          @media screen and (max-width: 380px) {
+            width: 34px;
+            margin-right: 5px;
+          }
+        }
+
+      }
+
+    }
+
+  }
+
+}

@@ -1,0 +1,57 @@
+@import url(http://fonts.googleapis.com/css?family=Lato|Source+Code+Pro:400,700|Open+Sans:300,600);
+
+@import "bourbon";
+@import "neat";
+
+@import "includes/variables";
+@import "includes/mixins";
+
+@import "includes/normalize";
+@import "includes/nav";
+@import "includes/hero";
+@import "includes/portfolio";
+@import "includes/about";
+@import "includes/modal";
+
+body {
+  -webkit-font-smoothing: antialiased;
+  color: $darkestGray;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: normal;
+  }
+
+  .container {
+    @include outer-container(100%);
+  }
+
+  .container-inner {
+    @include outer-container(50%);
+
+    @media screen and (max-width: 2000px) {
+      @include outer-container(60%);
+    }
+
+    @media screen and (max-width: 1600px) {
+      @include outer-container(70%);
+    }
+
+    @media screen and (max-width: 1400px) {
+      @include outer-container(80%);
+    }
+
+    @media screen and (max-width: 1150px) {
+      @include outer-container(90%);
+    }
+  }
+
+  .row {
+    @include row();
+  }
+
+}
