@@ -15,7 +15,7 @@
   <body>
 
   <nav class="navigation">
-    <!-- <a href="#hero" class="logo home-link">CATHERINE MEYERS</a> -->
+    <a href="#hero" class="logo home-link">CATHERINE MEYERS</a>
 
     <div class="hamburger">
         <div class="line-wrapper">
@@ -26,7 +26,7 @@
     </div>
 
     <div class="nav-items">
-      <a href="#hero" class="home-link">Home</a>
+      <a href="#hero" class="home-link" id="mobile-home-link">Catherine Meyers</a>
       <a href="#portfolio" class="portfolio-link">Portfolio</a>
       <a href="#about" class="about-link">About</a>
     </div>
@@ -34,35 +34,29 @@
 
   <div class="hero" id="hero">
     <div class="container">
-      <div class="header">
-        <div class="header-logo">
-          <a href="#hero" class="logo home-link">CATHERINE MEYERS</a>
+      <div class="row">      
+        <div class="header">
+          <div class="header-logo">
+            <a href="#hero" class="logo home-link">CATHERINE MEYERS</a>
+          </div>
+          <div class="subtag">
+            <div class="subtag-before"></div>
+            <h1>Opera Singer turned <span>Web Developer</span></h1>
+            <div class="subtag-after"></div>
+          </div>
         </div>
-        <div class="header-before"></div>
-        <h1>Opera Singer turned <span>Web Developer</span></h1>
-        <div class="header-after"></div>
       </div>
     </div>
   </div>
 
-  <div class="modal-overlay"></div>
-  <div class="modal">
-    <div class="modal-inner">
-      <div class="close"></div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores molestiae eveniet aliquam quas quia odio beatae labore atque maiores ipsum. Voluptas excepturi earum quisquam quia libero voluptates dolorum, animi repellat?</p>
-    </div>
-  </div>
-
   <div class="portfolio" id="portfolio">
-    <div class="container">
-      <h1>Portfolio</h1>
+    <h1>Portfolio</h1>
+    <div class="container-inner">
       <div class="front-end">
         <div class="row">
-          <div class="boxes">
-            <div class="h2-wrapper">
-              <h2>Front-End</h2>
-            </div>
-            <div class="detail va">
+          <h2>Front-End</h2>
+          <div class="detail va">
+            <a href="http://valetanywhere.com/" target="_blank">
               <div class="detail-text">
                 <img src="images/valet-anywhere-text.png">
                 <h5>Built with:</h5>
@@ -70,8 +64,10 @@
               </div>
               <div class="overlay">
               </div>
-            </div>
-            <div class="detail shapeup">
+            </a>
+          </div>
+          <div class="detail shapeup">
+            <a href="http://www.shapeup.com/" target="_blank">
               <div class="detail-text">
                 <img src="images/shapeup-text.png">
                 <h5>Built with:</h5>
@@ -79,8 +75,10 @@
               </div>
               <div class="overlay">
               </div>
-            </div>
-            <div class="detail smith">
+            </a>
+          </div>
+          <div class="detail smith">
+            <a href="http://www.gosmith.com/" target="_blank">
               <div class="detail-text">
                 <img src="images/smith-text.png">
                 <h5>Built with:</h5>
@@ -88,8 +86,10 @@
               </div>
               <div class="overlay">
               </div>
-            </div>
-            <div class="detail hippodrome">
+            </a>
+          </div>
+          <div class="detail hippodrome">
+            <a href="http://hippodrome.com/" target="_blank">
               <div class="detail-text">
                 <img src="images/hippodrome-text-blue.png">
                 <h5>Built with:</h5>
@@ -97,9 +97,7 @@
               </div>
               <div class="overlay">
               </div>
-            </div>
-          </div>
-          <div class="white-space">
+            </a>
           </div>
         </div>
       </div>
@@ -107,41 +105,47 @@
         <h2>Back-End</h2>
         <div class="row">
           <div class="detail ensemblify">
-            <div class="detail-text">
-              <h4>Connects classical musicians with chamber ensembles</h4>
-              <h5>Built with:</h5>
-              <p>Ruby on Rails, Facebook Omniauth, Geocoding, Spotify API, methods to query the database for matches, internal messaging system</p>
-              <!-- <li>Uses Facebook Omniauth to create and authenticate users</li> -->
-              <!-- <li>Queries the database with intelligent matching algorithms to return appropriate matches for musicians and groups</li> -->
-              <!-- <li>Uses notification/messaging system for pending invitations/requests/messages</li> -->
-              <!-- <li>Implemented internal user to user messaging system</li> -->
-              <!-- <li>Incorporated the Spotify API to enable user to preview pieces of music</li> -->
-            </div>
-            <div class="overlay">
-            </div>
+            <a href="http://www.ensemblify.com/" target="_blank">
+              <div class="detail-text">
+                <h4>Connects classical musicians with chamber ensembles</h4>
+                <h5>Built with:</h5>
+                <p>Ruby on Rails, Facebook Omniauth, Geocoding, Spotify API, methods to query the database for matches, internal messaging system</p>
+                <!-- <li>Uses Facebook Omniauth to create and authenticate users</li> -->
+                <!-- <li>Queries the database with intelligent matching algorithms to return appropriate matches for musicians and groups</li> -->
+                <!-- <li>Uses notification/messaging system for pending invitations/requests/messages</li> -->
+                <!-- <li>Implemented internal user to user messaging system</li> -->
+                <!-- <li>Incorporated the Spotify API to enable user to preview pieces of music</li> -->
+              </div>
+              <div class="overlay">
+              </div>
+            </a>
           </div>
           <div class="detail best-stop">
-            <div class="detail-text">
-              <h4>Provides alternatives to rest-stop eateries</h4>
-              <h5>Built with:</h5>
-              <p>Ruby on Rails, Google Maps API, Yelp API, methods to calculate lat/long of stopping point</p>
-              <!-- <li>Utilized the Google Maps API to display a route from start to end</li> -->
-              <!-- <li>Calculated the latitude/longitude of a stopping point requested by distance or time</li> -->
-              <!-- <li>Integrated the Yelp API to present the user with a selection of highly rated restaurants at or near designated point</li> -->
-            </div>
-            <div class="overlay">
-            </div>
+            <a href="http://best-stop.herokuapp.com/" target="_blank">
+              <div class="detail-text">
+                <h4>Provides alternatives to rest-stop eateries</h4>
+                <h5>Built with:</h5>
+                <p>Ruby on Rails, Google Maps API, Yelp API, methods to calculate lat/long of stopping point</p>
+                <!-- <li>Utilized the Google Maps API to display a route from start to end</li> -->
+                <!-- <li>Calculated the latitude/longitude of a stopping point requested by distance or time</li> -->
+                <!-- <li>Integrated the Yelp API to present the user with a selection of highly rated restaurants at or near designated point</li> -->
+              </div>
+              <div class="overlay">
+              </div>
+            </a>
           </div>
           <div class="detail petite-performer">
-            <div class="detail-text">
-              <h4>A search engine for early childhood music classes in NYC</h4>
-              <h5>Built with:</h5>
-              <p>Ruby, Sinatra, Geocoding, methods to query the database based on location, age, and availability</p>
-              <!-- <li>Built search functionality to query database and return appropriate matches based on location, age, and availability</li> -->
-              <!-- <li>Incorporated geocoding to sort results by distance and to provide mapping</li> -->
-            </div>
-            <div class="overlay">
-            </div>
+            <a href="http://www.petiteperformer.com/" target="_blank">
+              <div class="detail-text">
+                <h4>A search engine for early childhood music classes in NYC</h4>
+                <h5>Built with:</h5>
+                <p>Ruby, Sinatra, Geocoding, methods to query the database based on location, age, and availability</p>
+                <!-- <li>Built search functionality to query database and return appropriate matches based on location, age, and availability</li> -->
+                <!-- <li>Incorporated geocoding to sort results by distance and to provide mapping</li> -->
+              </div>
+              <div class="overlay">
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -149,17 +153,24 @@
   </div>
 
   <div class="about" id="about">
-    <div class="container-inner">
+    <div class="row">
       <h1>About</h1>
+    </div>
+    <div class="container-inner">
       <div class="row">
         <div class="pic">
           <img src="images/catherine_meyers.jpg" alt="catherine_meyers">
         </div>
         <div class="text">
-          <p>Hi, there! I’m Catherine, and I am a full-stack web developer. I am a recent graduate of <a href="http://flatironschool.com/" target="_blank">The Flatiron School</a> where I learned the wonders of Ruby on Rails and JavaScript. Since then, I have been expanding my skill set even more by building websites and web applications for a diverse clientele at <a href="http://redantler.com" target="_blank">Red Antler</a>, a branding consultancy in Dumbo.</p>
+          <p>Hi, there! I’m Catherine, and I am a full-stack web developer. I currently work at <a href="http://redantler.com" target="_blank">Red Antler</a>, a branding agency in Brooklyn, where I build and maintain fully responsive websites and web applications for a varied and diverse clientele. I love collaborating with designers, UX folk, and project managers to create the best possible sites we can. I am a  graduate of <a href="http://flatironschool.com/" target="_blank">The Flatiron School</a> where I learned the wonders of Ruby on Rails and JavaScript.</p>
 
           <p>I came to the programming world from a career as a professional opera singer, and I am constantly amazed at the parallels between the two. The ability to memorize hundreds of pieces of music has made me a developer with an astute attention to detail. My skills at recognizing musical patterns has made me a developer who thinks modularly. And because opera is a field where one is constantly learning and improving, I am a developer who sees every project as an opportunity to learn something new and improve upon what I coded previously. The more I build and learn, the more my love for creating things through code deepens!</p>
+
         </div>
+      </div>
+      <div class="skills row">
+        <p>Stuff I use on the regular: HTML, CSS, SASS/SCSS, LESS, JavaScript, jQuery, Ruby, Rails, Backbone.js, Wordpress, Themosis, Git, GitHub, GitLab, Grunt, Gulp, Browserify, RequireJS, Bourbon Neat, Bootstrap</p>
+        <p>Stuff I feel comfortable with: PHP, Meteor, AngularJS, Ember, Jeet</p>
       </div>
       <div class="links row">
         <div class="social">
@@ -169,7 +180,6 @@
           <a href="http://twitter.com/ccmeyers324" target="blank"><img src="images/twitter.png" alt="twitter"></a>
           <a href="mailto:ccmeyers@gmail.com" target="_blank"><img src="images/email.png" alt="email"></a>
         </div>
-        <div class="resume"><a href="images/catherine-meyers-resume.pdf">my resum&eacute;</a></div>
       </div>
     </div>
   </div>

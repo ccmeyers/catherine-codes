@@ -3,13 +3,21 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(237,243,253,0.9);
+  background-color: rgba(237,243,253,0.9);
   padding: 25px 8.5%;
   z-index: 100;
 
+  .logo {
+    display: none;
+    text-decoration: none;
+    @include opensans-light;
+    color: $red;
+    font-size: 30px;
+  }
+
   .nav-items {
     float: right;
-    margin: 7px 0;
+    margin: 11px 0;
 
     a {
       margin-left: 65px;
@@ -31,7 +39,18 @@
 
       @include media($tab_port) {
         display: block;
-        line-height: 1.4;
+        line-height: 1.7;
+      }
+
+      &#mobile-home-link {
+        display: none;
+        @include opensans-light;
+        color: $red;
+        font-size: 16px;
+
+        @include media($tab_port) {
+          display: block;
+        }
       }
       
     }
@@ -43,7 +62,7 @@
       overflow: hidden;
       top: 72px;
       width: 100%;
-      background: rgba(255,255,255,0.95);
+      background-color: rgba(237,243,253,0.9);
       margin: 0;
       padding: 0;
       @include transition(height 500ms, padding 500ms);

@@ -1,6 +1,6 @@
 .portfolio {
 
-  background-color: #fff;
+  background-color: #e5e5e5;
   color: $red;
   padding: 100px 0;
 
@@ -18,56 +18,122 @@
     border-top: 1px solid $red;
     border-right: 1px solid $red;
     border-bottom: 1px solid $red;
+
+    @media screen and (max-width: 1010px) {
+      width: 35%;
+    }
+
+    @include media($tab_port) {
+      width: 40%;
+    }
+
+    @media screen and (max-width: 675px) {
+      width: 45%;
+    }
+
+    @media screen and (max-width: 530px) {
+      width: 55%;
+    }
+    
+    @media screen and (max-width: 400px) {
+      width: 70%;
+    }
   }
 
   h2 {
+    position: absolute;
+    top: 50%;
+    margin-top: -24px;
+    left: -100px;
     @include opensans-semibold;
     font-size: 18px;
     color: #636363;
-    // @include transform(rotate(270deg));
-    text-align: center;
-    float: left;
-    // width: 150px;
-    // margin: 0 -20px 0 45px;
+    @include transform(rotate(270deg));
+
+    @media screen and (max-width: 1150px) {
+      left: -77px;
+    }
+
+    @media screen and (max-width: 1010px) {
+      left: 40px;
+    }
+
+    @media screen and (max-width: 675px) {
+      top: 68px;
+      left: 0;
+    }
+
+    @media screen and (max-width: 400px) {
+      top: 68px;
+      left: -25px;
+    }
+  }
+
+  .container-inner {
+    @media screen and (max-width: 850px) {
+      @include outer-container(100%);
+    }
   }
 
   .front-end {
+    position: relative;
     margin-bottom: 50px;
 
-    .boxes {
-      @include span-columns(10, 'block-collapse');
-      background-color: $medGray;
-      padding: 20px;
+    @media screen and (max-width: 675px) {
+      margin-bottom: 0;
+    }
 
-      .h2-wrapper {
-        @include span-columns(1 of 10)
+    .detail {
+      position: relative;
+      @include span-columns(3);
+      overflow: hidden;
+      background: rgba(255,255,255,0.9) url('../images/valet-anywhere-logo.png') no-repeat center center;
+      background-size: contain;
+      height: 250px;
+
+      @media screen and (min-width: 676px) and (max-width: 1010px) {
+
+        @include span-columns(4);
+
+        &:nth-child(2n) {
+          @include shift(2);
+        }
+
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+
+        &:nth-child(1),
+        &:nth-child(2) {
+          margin-bottom: 15px;
+        }
       }
 
-      .detail {
-        position: relative;
-        @include span-columns(2.25 of 10);
-        overflow: hidden;
-        background: rgba(255,255,255,0.9) url('../images/valet-anywhere-logo.png') no-repeat center center;
+      @media screen and (max-width: 675px) {
+        @include span-columns(8);
+        @include shift(2);
+        margin-bottom: 15px;
+      }
+
+      &.shapeup {
+        background: #232145 url('../images/shapeup-logo.png') no-repeat center center;
         background-size: contain;
-        height: 250px;
-        cursor: pointer;
+      }
 
-        &.shapeup {
-          background: #232145 url('../images/shapeup-logo.png') no-repeat center center;
-          background-size: contain;
-        }
+      &.smith {
+        background: #44a3e7 url('../images/smith-logo-white.png') no-repeat center center;
+        background-size: contain;
+      }
 
-        &.smith {
-          background: #44a3e7 url('../images/smith-logo-white.png') no-repeat center center;
-          background-size: contain;
-        }
+      &.hippodrome {
+        background: #001964 url('../images/hippodrome-logo-white.png') no-repeat center center;
+        background-size: contain;
+      }
 
-        &.hippodrome {
-          background: #001964 url('../images/hippodrome-logo-white.png') no-repeat center center;
-          background-size: contain;
-        }
+      a {
+        text-decoration: none;
 
-        &-text {
+        .detail-text {
           opacity: 0;
           position: relative;
           text-align: center;
@@ -94,52 +160,58 @@
 
         }
 
-        &:hover {
+      }
 
-          .detail-text {
-            opacity: 1;
-            @include transition(opacity 0.5s ease-in 0.6s);
-          }
+      &:hover {
 
-          .overlay {
-            top: 0;
-            @include transition(all 0.6s ease-in);
-            @include transform(translateX(-15%) translateY(-16%) rotate(45deg));
-          }
-
+        .detail-text {
+          opacity: 1;
+          @include transition(opacity 0.5s ease-in 0.6s);
         }
 
         .overlay {
-          position: absolute;
-          top: -250px;
-          background-color: rgba(255,255,255,0.9);
-          height: 145%;
-          width: 146%;
-          @include transform(translateX(-85%) translateY(-15%) rotate(45deg));
-          z-index: 2;
+          top: 0;
+          @include transition(all 0.6s ease-in);
+          @include transform(translateX(-15%) translateY(-16%) rotate(45deg));
         }
 
       }
 
-    }
+      .overlay {
+        position: absolute;
+        top: -307px;
+        background-color: rgba(255,255,255,0.9);
+        height: 145%;
+        width: 146%;
+        @include transform(translateX(-85%) translateY(-15%) rotate(45deg));
+        z-index: 2;
+      }
 
-    .white-space {
-      @include span-columns(2, 'block-collapse');
-      background-color: #fff;
     }
 
   }
 
 
   .back-end {
-    background-color: $medGray;
-    width: 71%;
+    position: relative;
     margin-bottom: 50px;
     padding: 20px 0;
 
+    h2 {
+      @media screen and (max-width: 675px) {
+        top: 82px;
+        left: 0;
+      }
+
+      @media screen and (max-width: 400px) {
+        top: 82px;
+        left: -17px;
+      }
+    }
+
     .detail {
       position: relative;
-      @include span-columns(3.2);
+      @include span-columns(3);
       overflow: hidden;
       background: url('../images/ensemblify-logo.png') no-repeat center center;
       background-size: contain;
@@ -147,7 +219,35 @@
       opacity: 0.9;
       cursor: pointer;
 
+      @media screen and (min-width: 676px) and (max-width: 1010px) {
+        @include span-columns(4);
+
+        &:nth-child(odd) {
+          @include shift(2);
+        }
+
+        &:nth-child(even) {
+          margin-right: 0;
+        }
+
+        &:nth-child(1),
+        &:nth-child(2) {
+          margin-bottom: 15px;
+        }
+      }
+
+      @media screen and (max-width: 675px) {
+        @include span-columns(8);
+        @include shift(2);
+        margin-bottom: 15px;
+      }
+
       &:first-child {
+        @include shift(1.5);
+
+        @media screen and (max-width: 1010px) {
+          @include shift(2);
+        }
 
         .detail-text {
 
@@ -174,33 +274,37 @@
         background-size: contain;
       }
 
-      &-text {
-        opacity: 0;
-        position: relative;
-        @include lato-normal;
-        z-index: 3;
-        padding: 10% 5%;
-        text-align: center;
+      a {
+        text-decoration: none;
 
-        h4 {
-          color: $darkestGray;
-          margin: 0;
-          font-size: 16px;
-        }
+        .detail-text {
+          opacity: 0;
+          position: relative;
+          @include lato-normal;
+          z-index: 3;
+          padding: 10% 5%;
+          text-align: center;
 
-        h5 {
-          margin: 7px 0 5px;
-          color: $wine;
-          text-transform: uppercase;
-          font-size: 15px;
-        }
-        
-        p {
-          color: $darkestGray;
-          font-size: 14px;
-          margin: 0;
-        }
+          h4 {
+            color: $darkestGray;
+            margin: 0;
+            font-size: 16px;
+          }
 
+          h5 {
+            margin: 7px 0 5px;
+            color: $wine;
+            text-transform: uppercase;
+            font-size: 15px;
+          }
+          
+          p {
+            color: $darkestGray;
+            font-size: 14px;
+            margin: 0;
+          }
+
+        }
       }
 
       &:hover {
@@ -220,7 +324,7 @@
 
       .overlay {
         position: absolute;
-        top: -250px;
+        top: -307px;
         background-color: rgba(255,255,255,0.9);
         height: 145%;
         width: 146%;

@@ -6,8 +6,8 @@ var $ = require('jquery-browserify'),
 var app = {
 
   documentWindow: $(window),
-  beforeHeader: $('.header-before'),
-  afterHeader: $('.header-after'),
+  beforeSubtag: $('.subtag-before'),
+  afterSubtag: $('.subtag-after'),
   headerLogo: $('.header-logo'),
   detail: $('.detail'),
   homeLink: $('.home-link'),
@@ -27,65 +27,42 @@ var app = {
   init: function() {
     app.displayHeader();
     app.fixHeader();
-    app.heroHeightSetter();
-    app.documentWindow.on('load', app.heroHeightSetter);
-    app.documentWindow.on('resize', app.heroHeightSetter);
-    app.documentWindow.on('orientationchange', app.heroHeightSetter);
     app.documentWindow.on('load', app.squarify);
     app.documentWindow.on('resize', app.squarify);
     app.documentWindow.on('orientationchange', app.squarify);
     app.navJumper();
     app.navHighlighter();
     app.mobileNav();
-    app.modalPop();
   },
 
   displayHeader: function() {
-    app.beforeHeader.delay(1500).fadeOut(1000);
-    app.afterHeader.delay(1500).fadeOut(1000);
+    app.beforeSubtag.delay(1500).fadeOut(1000);
+    app.afterSubtag.delay(1500).fadeOut(1000);
     setTimeout(function(){ 
-      app.beforeHeader.addClass('swapper').fadeIn(2000);
-      app.afterHeader.addClass('swapper').fadeIn(2000);
+      app.beforeSubtag.addClass('swapper').fadeIn(2000);
+      app.afterSubtag.addClass('swapper').fadeIn(2000);
     }, 3000);
   },
 
   fixHeader: function() {
-    app.documentWindow.on('scroll', function(){
-      var distance = app.headerLogo.offset().top,
-          scrollTop = $(this).scrollTop();
-      if (scrollTop >= (distance-21)) {
-        app.headerLogo.addClass('fix-to-nav');
-        $('.header').css('margin-top', '58px');
-        setTimeout(function(){
-          app.headerLogo.addClass('move-left');
-        }, 200);
-      }
-      // if (scrollTop < distance) {
-      //   app.headerLogo.addClass('move-right').removeClass('move-left');
-      // setTimeout(function(){
-      //   app.headerLogo.addClass('unfix').removeClass('fix-to-nav');
-      // }, 200);
-      // }
-    });
-  },
+    var width = app.documentWindow.innerWidth();
 
-  heroHeightSetter: function() {
-    var windowHeight = app.documentWindow.height();
-    app.hero.css('height', windowHeight - 20);
-    app.heroHeader.css('padding-top', (windowHeight/2)-(app.heroHeaderHeight/2));
+    if (width > 768) {
+      app.documentWindow.on('scroll', function(){
+        var distance = app.headerLogo.offset().top,
+            scrollTop = $(this).scrollTop();
+        if (scrollTop >= (distance-21)) {
+          $('.navigation .logo').fadeIn();
+        } else {
+          $('.navigation .logo').fadeOut();
+        }
+      });
+    }
   },
 
   squarify: function() {
-    var feWidth = app.detail.width(),
-        feH2 = (feWidth + 40 -75)/2,
-        beH2 = feH2 + 24;
-    console.log(feWidth);
-    console.log(feH2);
-    console.log(beH2);
-    app.detail.css('height', feWidth);
-    // $('.front-end h2').css('margin-top', feH2);
-    // $('.back-end h2').css('margin-top', beH2);
-    
+    var feWidth = app.detail.width();
+    app.detail.css('height', feWidth);    
   },
 
   navJumper: function() {
@@ -127,23 +104,6 @@ var app = {
       $(this).toggleClass('is-open');
       app.navItems.toggleClass('is-open');
     });
-  },
-
-  modalPop: function() {
-    app.portfolioBox.on('click', function(){
-        app.modalOverlay.addClass('open');
-        app.modal.addClass('open');
-    });
-
-    app.modalOverlay.on('click', function(){
-        app.modalOverlay.addClass('close').removeClass('open');
-        app.modal.addClass('close').removeClass('open');
-        setTimeout(function(){
-            app.modalOverlay.removeClass('close');
-            app.modal.removeClass('close');
-        }, 450);
-    });
-
   }
 
 }
