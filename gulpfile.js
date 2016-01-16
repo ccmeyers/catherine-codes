@@ -31,7 +31,7 @@ gulp.task('html', function()
         .pipe(htmlmin({
             collapseWhitespace: true
         }))
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('./'));
 });
 
 // js + browserify
