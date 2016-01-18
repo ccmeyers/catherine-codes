@@ -7,12 +7,21 @@
   padding: 25px 8.5%;
   z-index: 100;
 
+  @media screen and (max-width: 500px) {
+    padding: 10px 8.5%;
+  }
+
   .logo {
     display: none;
     text-decoration: none;
     @include opensans-light;
     color: $red;
     font-size: 30px;
+
+    @media screen and (max-width: 500px) {
+      font-size: 19px;
+      line-height: 37px;
+    }
   }
 
   .nav-items {
@@ -41,17 +50,6 @@
         display: block;
         line-height: 1.7;
       }
-
-      &#mobile-home-link {
-        display: none;
-        @include opensans-light;
-        color: $red;
-        font-size: 16px;
-
-        @include media($tab_port) {
-          display: block;
-        }
-      }
       
     }
 
@@ -72,6 +70,10 @@
         padding: 20px;
       }
 
+    }
+
+    @media screen and (max-width: 500px) {
+      top: 61px;
     }
 
   }

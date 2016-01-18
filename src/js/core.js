@@ -47,17 +47,15 @@ var app = {
   fixHeader: function() {
     var width = app.documentWindow.innerWidth();
 
-    if (width > 768) {
-      app.documentWindow.on('scroll', function(){
-        var distance = app.headerLogo.offset().top,
-            scrollTop = $(this).scrollTop();
-        if (scrollTop >= (distance-21)) {
-          $('.navigation .logo').fadeIn();
-        } else {
-          $('.navigation .logo').fadeOut();
-        }
-      });
-    }
+    app.documentWindow.on('scroll', function(){
+      var distance = app.headerLogo.offset().top,
+          scrollTop = $(this).scrollTop();
+      if (scrollTop >= (distance-21)) {
+        $('.navigation .logo').fadeIn();
+      } else {
+        $('.navigation .logo').fadeOut();
+      }
+    });
   },
 
   squarify: function() {
@@ -72,6 +70,10 @@ var app = {
       $('html, body').animate({
           scrollTop: $( $.attr(this, 'href') ).offset().top - navHeight + 1
       }, 500);
+      if (app.navItems.hasClass('is-open')) {
+        app.hamburger.removeClass('is-open');
+        app.navItems.removeClass('is-open');
+      }
       return false;
     });
   },
