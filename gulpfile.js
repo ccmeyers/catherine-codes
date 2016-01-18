@@ -20,7 +20,7 @@ var paths = {
     html: './src/*.html',
     js: './src/js/*.js',
     images: './src/images/*',
-    web_root: './dist'
+    web_root: './'
 };
 
 // minify html

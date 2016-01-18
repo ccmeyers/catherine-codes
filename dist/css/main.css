@@ -1396,6 +1396,13 @@ th {
 .about .container-inner .text p a {
   color: #9A0000;
   text-decoration: none;
+  -webkit-transition: color 0.25s;
+  -moz-transition: color 0.25s;
+  transition: color 0.25s;
+}
+
+.about .container-inner .text p a:hover {
+  color: #33466e;
 }
 
 .about .container-inner .pic {
@@ -1427,6 +1434,8 @@ th {
     display: block;
     margin-right: 2.35765%;
     width: 100%;
+    text-align: center;
+    margin-right: 0;
   }
   .about .container-inner .pic:last-child {
     margin-right: 0;
@@ -1440,34 +1449,98 @@ th {
 
 @media screen and (max-width: 950px) {
   .about .container-inner .pic img {
-    display: none;
+    width: 50%;
   }
 }
 
-.about .container-inner .links {
-  margin-top: 15px;
+.about .container-inner .connect .resume-link {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
 }
 
-.about .container-inner .links .social {
+.about .container-inner .connect .resume-link:last-child {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 605px) {
+  .about .container-inner .connect .resume-link {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .about .container-inner .connect .resume-link:last-child {
+    margin-right: 0;
+  }
+}
+
+.about .container-inner .connect .resume-link a {
+  color: #9A0000;
+  line-height: 45px;
+  text-decoration: none;
+  -webkit-transition: color 0.25s;
+  -moz-transition: color 0.25s;
+  transition: color 0.25s;
+}
+
+.about .container-inner .connect .resume-link a:hover {
+  color: #33466e;
+}
+
+.about .container-inner .connect .links {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+}
+
+.about .container-inner .connect .links:last-child {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 605px) {
+  .about .container-inner .connect .links {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  .about .container-inner .connect .links:last-child {
+    margin-right: 0;
+  }
+}
+
+.about .container-inner .connect .links .social {
   text-align: right;
 }
 
-@media screen and (max-width: 380px) {
-  .about .container-inner .links .social {
+@media screen and (max-width: 605px) {
+  .about .container-inner .connect .links .social {
     text-align: center;
   }
 }
 
-.about .container-inner .links .social img {
+.about .container-inner .connect .links .social img {
   width: 40px;
   margin-right: 10px;
+  -webkit-transition: opacity 0.25s;
+  -moz-transition: opacity 0.25s;
+  transition: opacity 0.25s;
 }
 
-@media screen and (max-width: 380px) {
-  .about .container-inner .links .social img {
+@media screen and (max-width: 605px) {
+  .about .container-inner .connect .links .social img {
     width: 34px;
     margin-right: 5px;
   }
+}
+
+.about .container-inner .connect .links .social img:hover {
+  opacity: 0.5;
 }
 
 .modal-overlay {
