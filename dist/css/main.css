@@ -1,17 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Lato|Source+Code+Pro:400,700|Open+Sans:300,600);
-/* Neat 1.7.0
- * http://neat.bourbon.io
- * Copyright 2012-2014 thoughtbot, inc.
- * MIT License */
 html {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
+*, *::after, *::before {
   box-sizing: inherit;
 }
 
@@ -847,10 +839,10 @@ th {
     margin-left: auto;
     margin-right: auto;
   }
-  .portfolio .container-inner:after {
+  .portfolio .container-inner::after {
+    clear: both;
     content: "";
     display: table;
-    clear: both;
   }
 }
 
@@ -1631,10 +1623,10 @@ body .container {
   margin-right: auto;
 }
 
-body .container:after {
+body .container::after {
+  clear: both;
   content: "";
   display: table;
-  clear: both;
 }
 
 body .container-inner {
@@ -1643,10 +1635,10 @@ body .container-inner {
   margin-right: auto;
 }
 
-body .container-inner:after {
+body .container-inner::after {
+  clear: both;
   content: "";
   display: table;
-  clear: both;
 }
 
 @media screen and (max-width: 2000px) {
@@ -1655,10 +1647,10 @@ body .container-inner:after {
     margin-left: auto;
     margin-right: auto;
   }
-  body .container-inner:after {
+  body .container-inner::after {
+    clear: both;
     content: "";
     display: table;
-    clear: both;
   }
 }
 
@@ -1668,10 +1660,10 @@ body .container-inner:after {
     margin-left: auto;
     margin-right: auto;
   }
-  body .container-inner:after {
+  body .container-inner::after {
+    clear: both;
     content: "";
     display: table;
-    clear: both;
   }
 }
 
@@ -1681,10 +1673,10 @@ body .container-inner:after {
     margin-left: auto;
     margin-right: auto;
   }
-  body .container-inner:after {
+  body .container-inner::after {
+    clear: both;
     content: "";
     display: table;
-    clear: both;
   }
 }
 
@@ -1694,10 +1686,10 @@ body .container-inner:after {
     margin-left: auto;
     margin-right: auto;
   }
-  body .container-inner:after {
+  body .container-inner::after {
+    clear: both;
     content: "";
     display: table;
-    clear: both;
   }
 }
 
@@ -1705,8 +1697,8 @@ body .row {
   display: block;
 }
 
-body .row:after {
+body .row::after {
+  clear: both;
   content: "";
   display: table;
-  clear: both;
 }
