@@ -124,14 +124,14 @@
         @include shift(2);
       }
 
+      &.allbirds {
+        background: #ffffff url('../images/allbirds-logo.png') no-repeat center center;
+        background-size: 20%;
+      }
+
       &.dcg {
         background: #000000 url('../images/dcg-logo.svg') no-repeat center center;
         background-size: 40%;
-      }
-
-      &.doc-rec {
-        background: #4E00FF url('../images/doc-rec.png') no-repeat center center;
-        background-size: 50%;
       }
 
       &.slide {
@@ -173,7 +173,7 @@
         background-size: 50%;
 
         @media screen and (min-width: 676px) and (max-width: 1010px) {
-          @include shift(2);
+          @include shift(4);
         }
       }
 
@@ -303,7 +303,6 @@
       }
 
       &:first-child {
-        @include shift(1.5);
 
         @media screen and (max-width: 1010px) {
           @include shift(2);
@@ -325,6 +324,11 @@
 
         }
 
+      }
+
+      &.doc-rec {
+        background: #4E00FF url('../images/doc-rec.png') no-repeat center center;
+        background-size: 50%;
       }
 
       &.best-stop {
