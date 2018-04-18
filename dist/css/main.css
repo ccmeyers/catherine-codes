@@ -710,7 +710,7 @@ th {
   font-family: 'Source Code Pro', serif;
   font-weight: 400;
   text-transform: lowercase;
-  font-size: 30px;
+  font-size: 27px;
   line-height: 35px;
   margin: 0 10px;
 }
@@ -948,58 +948,9 @@ th {
   background-size: 75%;
 }
 
-.portfolio .front-end .detail.shapeup {
-  margin-left: 12.79471%;
-  background: #232145 url("../images/shapeup-logo.png") no-repeat center center;
-  background-size: 50%;
-}
-
-@media screen and (min-width: 676px) and (max-width: 1010px) {
-  .portfolio .front-end .detail.shapeup {
-    margin-left: 17.05961%;
-  }
-}
-
-@media screen and (max-width: 675px) {
-  .portfolio .front-end .detail.shapeup {
-    margin-left: 25.58941%;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .portfolio .front-end .detail.shapeup {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 65.88078%;
-    margin-left: 17.05961%;
-  }
-  .portfolio .front-end .detail.shapeup:last-child {
-    margin-right: 0;
-  }
-}
-
-.portfolio .front-end .detail.smith {
-  background: #44a3e7 url("../images/smith-logo-white.png") no-repeat center center;
-  background-size: 50%;
-}
-
-@media screen and (min-width: 676px) and (max-width: 1010px) {
-  .portfolio .front-end .detail.smith {
-    margin-left: 0%;
-    margin-right: 0;
-  }
-}
-
 .portfolio .front-end .detail.hippodrome {
   background: #001964 url("../images/hippodrome-logo-white.png") no-repeat center center;
   background-size: 50%;
-}
-
-@media screen and (min-width: 676px) and (max-width: 1010px) {
-  .portfolio .front-end .detail.hippodrome {
-    margin-left: 34.11922%;
-  }
 }
 
 .portfolio .front-end .detail a {

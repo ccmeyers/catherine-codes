@@ -139,42 +139,9 @@
         background-size: 75%;
       }
 
-      &.shapeup {
-        @include shift(1.5);
-        background: #232145 url('../images/shapeup-logo.png') no-repeat center center;
-        background-size: 50%;
-
-        @media screen and (min-width: 676px) and (max-width: 1010px) {
-          @include shift(2);
-        }
-
-        @media screen and (max-width: 675px) {
-          @include shift(3);
-        }
-
-        @media screen and (max-width: 450px) {
-          @include span-columns(8);
-          @include shift(2);
-        }
-      }
-
-      &.smith {
-        background: #44a3e7 url('../images/smith-logo-white.png') no-repeat center center;
-        background-size: 50%;
-
-        @media screen and (min-width: 676px) and (max-width: 1010px) {
-          @include shift(0);
-          margin-right: 0;
-        }
-      }
-
       &.hippodrome {
         background: #001964 url('../images/hippodrome-logo-white.png') no-repeat center center;
         background-size: 50%;
-
-        @media screen and (min-width: 676px) and (max-width: 1010px) {
-          @include shift(4);
-        }
       }
 
       a {
